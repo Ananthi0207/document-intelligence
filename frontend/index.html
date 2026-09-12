@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Document Intelligence
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/styles.css"
+    >
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div>
+            <h1>
+                Document Intelligence
+            </h1>
+
+            <p>
+                AI-powered financial document
+                extraction and validation
+            </p>
+        </div>
+
+        <div
+            id="apiStatus"
+            class="health-badge"
+        >
+            Checking API...
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- ========================================= -->
+        <!-- UPLOAD                                    -->
+        <!-- ========================================= -->
+
+        <section class="card">
+
+            <h2>
+                Process Document
+            </h2>
+
+            <p class="muted">
+                Upload a PDF, JPG or PNG document
+                and select its document type.
+            </p>
+
+            <form id="uploadForm">
+
+                <div class="form-grid">
+
+                    <div class="field">
+
+                        <label for="documentType">
+                            Document Type
+                        </label>
+
+                        <select
+                            id="documentType"
+                            required
+                        >
+                            <option value="">
+                                Select document type
+                            </option>
+
+                            <option value="invoice">
+                                Invoice
+                            </option>
+
+                            <option value="balance_sheet">
+                                Balance Sheet
+                            </option>
+
+                            <option value="profit_and_loss">
+                                Profit & Loss
+                            </option>
+
+                            <option value="cash_flow_statement">
+                                Cash Flow Statement
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="documentFile">
+                            Document
+                        </label>
+
+                        <input
+                            id="documentFile"
+                            type="file"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="processButton"
+                    class="primary-button"
+                    type="submit"
+                >
+                    Process Document
+                </button>
+
+            </form>
+
+
+            <div
+                id="message"
+                class="message hidden"
+            ></div>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- DASHBOARD                                 -->
+        <!-- ========================================= -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>
+                        Processed Documents
+                    </h2>
+
+                    <p class="muted">
+                        Results stored in the database.
+                    </p>
+                </div>
+
+                <button
+                    id="refreshButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>
+                                Document
+                            </th>
+
+                            <th>
+                                Type
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Processed
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="documentsTable">
+
+                        <tr>
+                            <td colspan="5">
+                                Loading...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- RESULT                                    -->
+        <!-- ========================================= -->
+
+        <section
+            id="resultSection"
+            class="card hidden"
+        >
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>
+                        Document Result
+                    </h2>
+
+                    <p
+                        id="resultTitle"
+                        class="muted"
+                    ></p>
+                </div>
+
+                <span
+                    id="resultStatus"
+                    class="status-badge"
+                >
+                </span>
+
+            </div>
+
+
+            <h3>
+                File Validation
+            </h3>
+
+            <div
+                id="fileValidation"
+                class="kv-grid"
+            ></div>
+
+
+            <h3>
+                Extracted Fields
+            </h3>
+
+            <div
+                id="extractedFields"
+                class="kv-grid"
+            ></div>
+
+
+            <div
+                id="lineItemsSection"
+                class="hidden"
+            >
+
+                <h3>
+                    Line Items / Financial Rows
+                </h3>
+
+                <div
+                    id="lineItems"
+                    class="table-wrapper"
+                ></div>
+
+            </div>
+
+
+            <div
+                id="additionalFieldsSection"
+                class="hidden"
+            >
+
+                <h3>
+                    Additional Fields
+                </h3>
+
+                <div
+                    id="additionalFields"
+                    class="table-wrapper"
+                ></div>
+
+            </div>
+
+
+            <h3>
+                Financial Validation
+            </h3>
+
+            <div
+                id="validationSummary"
+                class="validation-summary"
+            ></div>
+
+            <div
+                id="validationChecks"
+                class="table-wrapper"
+            ></div>
+
+
+            <details class="raw-json">
+
+                <summary>
+                    View Raw JSON
+                </summary>
+
+                <pre id="rawJson"></pre>
+
+            </details>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        Document Intelligence Case Study
+
+    </footer>
+
+
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
