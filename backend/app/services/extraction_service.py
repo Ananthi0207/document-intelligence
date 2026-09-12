@@ -100,6 +100,83 @@ def normalize_label(
     )
 
 
+def normalize_period_key(value):
+    """Normalize equivalent comparative-period labels."""
+
+    if value is None:
+        return ""
+
+    text = str(value).strip().lower()
+    text = text.replace("–", "-").replace("—", "-")
+
+    month_numbers = {
+        "jan": 1,
+        "feb": 2,
+        "mar": 3,
+        "apr": 4,
+        "may": 5,
+        "jun": 6,
+        "jul": 7,
+        "aug": 8,
+        "sep": 9,
+        "oct": 10,
+        "nov": 11,
+        "dec": 12,
+    }
+
+    month_number = None
+
+    for month_name, number in month_numbers.items():
+        if re.search(
+            rf"\b{month_name}[a-z]*\b",
+            text,
+        ):
+            month_number = number
+            break
+
+    if month_number is not None:
+        year_matches = re.findall(
+            r"\b(?:19|20)\d{2}\b|\b\d{2}\b",
+            text,
+        )
+
+        if year_matches:
+            raw_year = year_matches[-1]
+            year = int(raw_year)
+
+            if len(raw_year) == 2:
+                year += (
+                    2000
+                    if year < 70
+                    else 1900
+                )
+
+            return (
+                f"{year:04d}-"
+                f"{month_number:02d}"
+            )
+
+    text = re.sub(
+        r"\b("
+        r"for\s+the\s+year\s+ended"
+        r"|year\s+ended"
+        r"|as\s+at"
+        r")\b",
+        " ",
+        text,
+    )
+
+    text = re.sub(
+        r"[^a-z0-9]+",
+        " ",
+        text,
+    )
+
+    return " ".join(
+        text.split()
+    )
+
+
 # ==========================================================
 # COMMON NORMALIZATION HELPER
 # ==========================================================
@@ -352,18 +429,6 @@ def normalize_invoice_data(
 
             break
 
-    # ------------------------------------------------------
-    # Receipt-style:
-    #
-    # TOTAL AMT       60.31
-    # ROUNDING ADJ    -0.01
-    # final amount    60.30
-    #
-    # If Gemini placed 60.31 into subtotal, move it to the
-    # more accurate amount_before_rounding field when the
-    # source relationship itself proves that interpretation.
-    # ------------------------------------------------------
-
     subtotal_field = (
         data.get(
             "subtotal"
@@ -481,7 +546,6 @@ def normalize_invoice_data(
     return data
 
 
-
 # ==========================================================
 # BALANCE SHEET NORMALIZATION
 # ==========================================================
@@ -494,8 +558,10 @@ def _numeric_key(
     Stable comparison key for source-backed numeric values.
     """
 
-    parsed = parse_visible_numeric_value(
-        value
+    parsed = (
+        parse_visible_numeric_value(
+            value
+        )
     )
 
     if parsed is None:
@@ -515,9 +581,7 @@ def _extract_matching_number_tokens(
     Return numeric tokens from source text whose values are
     already present in the extracted Balance Sheet data.
 
-    This is used only to restore row/period alignment when OCR
-    flattens a multi-column financial table. No values are
-    calculated or invented.
+    Kept as a utility for source-backed comparisons.
     """
 
     tokens = []
@@ -570,6 +634,64 @@ def _extract_matching_number_tokens(
     return tokens
 
 
+def _extract_source_number_tokens(
+    text: str,
+):
+    """
+    Return all explicit numeric tokens from the cropped
+    Balance Sheet source area in their original OCR order.
+
+    This deliberately does not require Gemini to have
+    extracted every number first.
+
+    Reported Total Assets values are later used as anchors,
+    so values remain source-grounded rather than inferred.
+    """
+
+    tokens = []
+
+    pattern = re.compile(
+        r"\(?-?\d[\d,]*(?:\.\d+)?\)?"
+    )
+
+    for match in pattern.finditer(
+        text
+    ):
+
+        raw = match.group(
+            0
+        )
+
+        parsed_value = (
+            parse_visible_numeric_value(
+                raw
+            )
+        )
+
+        if parsed_value is None:
+            continue
+
+        if (
+            isinstance(
+                parsed_value,
+                float,
+            )
+            and parsed_value.is_integer()
+        ):
+            parsed_value = int(
+                parsed_value
+            )
+
+        tokens.append(
+            {
+                "raw": raw,
+                "value": parsed_value,
+            }
+        )
+
+    return tokens
+
+
 def _set_period_amount_from_source(
     item: dict,
     period: str,
@@ -589,10 +711,14 @@ def _set_period_amount_from_source(
     ):
 
         if (
-            amount.get(
-                "period"
+            normalize_period_key(
+                amount.get(
+                    "period"
+                )
             )
-            != period
+            != normalize_period_key(
+                period
+            )
         ):
             continue
 
@@ -627,11 +753,11 @@ def normalize_balance_sheet_data(
     document_text: str,
 ):
     """
-    Normalize Balance Sheet table alignment without inventing
-    values.
+    Normalize Balance Sheet table alignment without
+    inventing values.
 
-    OCR frequently flattens comparative Balance Sheet columns.
-    A common layout is:
+    OCR frequently flattens comparative Balance Sheet
+    columns. A common layout is:
 
         asset rows
         Total
@@ -639,10 +765,10 @@ def normalize_balance_sheet_data(
 
     followed by the same values for the comparative period.
 
-    If Gemini shifts a comparative-period value by one row, this
-    function rebuilds the mapping from the original OCR number
-    sequence, using the explicitly extracted Total Assets values
-    only as source anchors.
+    If Gemini shifts a comparative-period value by one row,
+    this function rebuilds the mapping from the original OCR
+    number sequence, using explicitly extracted Total Assets
+    values as source anchors.
 
     No arithmetic is used to force a balance.
     """
@@ -707,8 +833,7 @@ def normalize_balance_sheet_data(
 
         if (
             section == "assets"
-            or name
-            in off_balance_aliases
+            or name in off_balance_aliases
         ):
             asset_items.append(
                 item
@@ -718,7 +843,6 @@ def normalize_balance_sheet_data(
         return data
 
     component_items = []
-
     off_balance_items = []
 
     for item in asset_items:
@@ -729,13 +853,8 @@ def normalize_balance_sheet_data(
             )
         )
 
-        if (
-            name
-            in off_balance_aliases
-        ):
+        if name in off_balance_aliases:
 
-            # These remain extracted and visible, but they are
-            # not Asset components for Balance Sheet validation.
             item[
                 "section"
             ] = "OFF BALANCE SHEET"
@@ -745,8 +864,7 @@ def normalize_balance_sheet_data(
             )
 
         elif (
-            name
-            not in total_aliases
+            name not in total_aliases
         ):
 
             component_items.append(
@@ -768,8 +886,10 @@ def normalize_balance_sheet_data(
         return data
 
     total_by_period = {
-        entry.get(
-            "period"
+        normalize_period_key(
+            entry.get(
+                "period"
+            )
         ): entry.get(
             "value"
         )
@@ -782,17 +902,15 @@ def normalize_balance_sheet_data(
     ordered_periods = [
         period
         for period in periods
-        if period in total_by_period
+        if normalize_period_key(
+            period
+        ) in total_by_period
     ]
 
     if len(
         ordered_periods
     ) < 2:
         return data
-
-    # ------------------------------------------------------
-    # Limit parsing to the ASSETS table area when possible.
-    # ------------------------------------------------------
 
     upper_text = (
         document_text.upper()
@@ -847,60 +965,14 @@ def normalize_balance_sheet_data(
         ]
     )
 
-    # ------------------------------------------------------
-    # Build a whitelist only from numbers Gemini already
-    # extracted from the Balance Sheet asset area.
-    # ------------------------------------------------------
-
-    allowed_values = set()
-
-    for item in asset_items:
-
-        for amount in (
-            item.get(
-                "amounts",
-                [],
-            )
-            or []
-        ):
-
-            key = _numeric_key(
-                amount.get(
-                    "value"
-                )
-            )
-
-            if key is not None:
-                allowed_values.add(
-                    key
-                )
-
-    for entry in total_assets:
-
-        key = _numeric_key(
-            entry.get(
-                "value"
-            )
-        )
-
-        if key is not None:
-            allowed_values.add(
-                key
-            )
-
     source_tokens = (
-        _extract_matching_number_tokens(
-            text=assets_source,
-            allowed_values=allowed_values,
+        _extract_source_number_tokens(
+            assets_source
         )
     )
 
     if not source_tokens:
         return data
-
-    # ------------------------------------------------------
-    # Locate each reported Total Assets value in source order.
-    # ------------------------------------------------------
 
     total_positions = []
 
@@ -910,7 +982,9 @@ def normalize_balance_sheet_data(
 
         total_key = _numeric_key(
             total_by_period.get(
-                period
+                normalize_period_key(
+                    period
+                )
             )
         )
 
@@ -948,18 +1022,6 @@ def normalize_balance_sheet_data(
             position
             + 1
         )
-
-    # ------------------------------------------------------
-    # Reconstruct period blocks strictly from source order:
-    #
-    # period 1 components
-    # total assets period 1
-    # period 1 off-balance rows
-    # period 2 components
-    # total assets period 2
-    # period 2 off-balance rows
-    # ...
-    # ------------------------------------------------------
 
     component_tokens_by_period = {}
     off_tokens_by_period = {}
@@ -1015,8 +1077,7 @@ def normalize_balance_sheet_data(
 
         between = (
             source_tokens[
-                current_total
-                + 1:
+                current_total + 1:
                 next_total
             ]
         )
@@ -1077,10 +1138,6 @@ def normalize_balance_sheet_data(
             ]
         )
 
-    # ------------------------------------------------------
-    # Update only existing extracted period cells.
-    # ------------------------------------------------------
-
     for period in ordered_periods:
 
         component_tokens = (
@@ -1140,6 +1197,7 @@ def normalize_balance_sheet_data(
                 )
 
     return data
+
 
 # ==========================================================
 # PROFIT & LOSS NORMALIZATION
@@ -1481,6 +1539,7 @@ Examples include:
 - bank information
 - reference numbers
 - payment terms
+
 INVOICE NUMBER RULE:
 
 Populate invoice_number only when the source clearly supports it
@@ -1775,7 +1834,9 @@ DOCUMENT TEXT:
                 BaseModel,
             ):
 
-                return parsed.model_dump()
+                return (
+                    parsed.model_dump()
+                )
 
             return (
                 output_schema
@@ -1798,8 +1859,10 @@ DOCUMENT TEXT:
 
             if attempt < max_attempts:
 
-                delay = 2 ** (
-                    attempt - 1
+                delay = (
+                    2 ** (
+                        attempt - 1
+                    )
                 )
 
                 print(

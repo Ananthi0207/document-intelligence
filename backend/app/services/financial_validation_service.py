@@ -1,3 +1,4 @@
+import re
 from decimal import (
     Decimal,
     InvalidOperation,
@@ -208,24 +209,97 @@ def normalize_text(
         normalized.split()
     )
 
+def normalize_period_key(value):
+    """
+    Normalize equivalent reporting-period labels so values such as
+    "31-Mar-17", "Mar-17", "As at 31-Mar-17", and
+    "Year ended 31-Mar-17" compare as the same period.
+    """
+
+    if value is None:
+        return ""
+
+    text = str(value).strip().lower()
+    text = (
+        text
+        .replace("–", "-")
+        .replace("—", "-")
+    )
+
+    month_numbers = {
+        "jan": 1,
+        "feb": 2,
+        "mar": 3,
+        "apr": 4,
+        "may": 5,
+        "jun": 6,
+        "jul": 7,
+        "aug": 8,
+        "sep": 9,
+        "oct": 10,
+        "nov": 11,
+        "dec": 12,
+    }
+
+    month_number = None
+
+    for month_name, number in month_numbers.items():
+        if re.search(
+            rf"\b{month_name}[a-z]*\b",
+            text,
+        ):
+            month_number = number
+            break
+
+    if month_number is not None:
+        year_matches = re.findall(
+            r"\b(?:19|20)\d{2}\b|\b\d{2}\b",
+            text,
+        )
+
+        if year_matches:
+            raw_year = year_matches[-1]
+            year = int(raw_year)
+
+            if len(raw_year) == 2:
+                year += 2000 if year < 70 else 1900
+
+            return f"{year:04d}-{month_number:02d}"
+
+    text = re.sub(
+        r"\b(for\s+the\s+year\s+ended|year\s+ended|as\s+at)\b",
+        " ",
+        text,
+    )
+
+    text = re.sub(
+        r"[^a-z0-9]+",
+        " ",
+        text,
+    )
+
+    return " ".join(
+        text.split()
+    )
 
 def get_period_value(
     period_amounts,
     period,
 ):
 
+    target_period = normalize_period_key(
+        period
+    )
+
     for item in period_amounts:
 
-        if (
-            str(
-                item.get(
-                    "period"
-                )
+        item_period = normalize_period_key(
+            item.get(
+                "period"
             )
-            == str(
-                period
-            )
-        ):
+        )
+
+        if item_period == target_period:
 
             return to_decimal(
                 item.get(
