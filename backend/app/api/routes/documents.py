@@ -1,4 +1,8 @@
 import json
+import logging
+import time
+
+from datetime import datetime, timezone
 
 from fastapi import (
     APIRouter,
@@ -51,6 +55,14 @@ from backend.app.repositories.document_repository import (
 
 
 # ==========================================================
+# LOGGING
+# ==========================================================
+
+
+logger = logging.getLogger(__name__)
+
+
+# ==========================================================
 # ROUTER
 # ==========================================================
 
@@ -74,6 +86,15 @@ async def process_document(
     db: Session = Depends(get_db),
 ):
 
+    started_at = time.perf_counter()
+
+    logger.info(
+        "Document processing started: "
+        "file=%s type=%s",
+        file.filename,
+        document_type.value,
+    )
+
     try:
 
         # ==================================================
@@ -82,11 +103,15 @@ async def process_document(
 
         file_content = await file.read()
 
+        logger.info(
+            "Uploaded file read successfully: "
+            "file=%s size_bytes=%s",
+            file.filename,
+            len(file_content),
+        )
+
         # ==================================================
         # 2. FILE VALIDATION
-        #
-        # IMPORTANT:
-        # Positional arguments are used intentionally.
         # ==================================================
 
         file_validation = validate_document(
@@ -94,11 +119,18 @@ async def process_document(
             file_content,
         )
 
+        logger.info(
+            "File validation completed: "
+            "file=%s status=%s",
+            file.filename,
+            file_validation.get(
+                "status",
+                "UNKNOWN",
+            ),
+        )
+
         # ==================================================
         # 3. TEXT EXTRACTION / OCR
-        #
-        # IMPORTANT:
-        # Positional arguments are used intentionally.
         # ==================================================
 
         text_extraction = (
@@ -115,6 +147,21 @@ async def process_document(
             )
         )
 
+        logger.info(
+            "Text extraction completed: "
+            "file=%s ocr_used=%s "
+            "fallback_used=%s",
+            file.filename,
+            text_extraction.get(
+                "ocr_used",
+                False,
+            ),
+            text_extraction.get(
+                "ocr_fallback_used",
+                False,
+            ),
+        )
+
         # ==================================================
         # 4. AI STRUCTURED EXTRACTION
         # ==================================================
@@ -124,6 +171,13 @@ async def process_document(
                 document_type=document_type,
                 document_text=document_text,
             )
+        )
+
+        logger.info(
+            "Structured extraction completed: "
+            "file=%s type=%s",
+            file.filename,
+            document_type.value,
         )
 
         # ==================================================
@@ -196,6 +250,11 @@ async def process_document(
 
         else:
 
+            logger.warning(
+                "Unsupported document type: %s",
+                document_type.value,
+            )
+
             return JSONResponse(
                 status_code=400,
                 content={
@@ -213,7 +272,70 @@ async def process_document(
             )
 
         # ==================================================
-        # 6. BUILD FINAL RESPONSE
+        # 6. DETERMINE PROCESSING STATUS
+        # ==================================================
+
+        validation_status = (
+            financial_validation.get(
+                "overall_status",
+                "NOT_APPLICABLE",
+            )
+        )
+
+        # A real validation failure should appear as FAILED.
+        # NOT_APPLICABLE can still mean the document itself
+        # was processed successfully.
+        if validation_status == "FAILED":
+            processing_status = "FAILED"
+        else:
+            processing_status = "PASS"
+
+        logger.info(
+            "Financial validation completed: "
+            "file=%s validation_status=%s "
+            "processing_status=%s",
+            file.filename,
+            validation_status,
+            processing_status,
+        )
+
+        # ==================================================
+        # 7. PROCESSING METADATA
+        # ==================================================
+
+        processing_time_ms = round(
+            (
+                time.perf_counter()
+                - started_at
+            )
+            * 1000
+        )
+
+        processing_metadata = {
+            "ocr_used": (
+                text_extraction.get(
+                    "ocr_used",
+                    False,
+                )
+            ),
+            "ocr_fallback_used": (
+                text_extraction.get(
+                    "ocr_fallback_used",
+                    False,
+                )
+            ),
+            "processed_at": (
+                datetime.now(
+                    timezone.utc
+                ).isoformat()
+            ),
+            "processing_time_ms": (
+                processing_time_ms
+            ),
+        }
+
+        # ==================================================
+        # 8. BUILD FINAL RESPONSE
         # ==================================================
 
         result = {
@@ -225,6 +347,9 @@ async def process_document(
             ),
             "document_type": (
                 document_type.value
+            ),
+            "processing_status": (
+                processing_status
             ),
             "file_validation": (
                 file_validation
@@ -238,10 +363,13 @@ async def process_document(
             "financial_validation": (
                 financial_validation
             ),
+            "processing_metadata": (
+                processing_metadata
+            ),
         }
 
         # ==================================================
-        # 7. SAVE RESULT TO DATABASE
+        # 9. SAVE RESULT TO DATABASE
         # ==================================================
 
         save_document(
@@ -251,16 +379,22 @@ async def process_document(
                 document_type.value
             ),
             status=(
-                financial_validation.get(
-                    "overall_status",
-                    "NOT_APPLICABLE",
-                )
+                processing_status
             ),
             result=result,
         )
 
+        logger.info(
+            "Document saved successfully: "
+            "file=%s status=%s "
+            "processing_time_ms=%s",
+            file.filename,
+            processing_status,
+            processing_time_ms,
+        )
+
         # ==================================================
-        # 8. RETURN FINAL RESPONSE
+        # 10. RETURN FINAL RESPONSE
         # ==================================================
 
         return result
@@ -270,6 +404,14 @@ async def process_document(
     # ======================================================
 
     except DocumentValidationError as error:
+
+        logger.warning(
+            "Document validation failed: "
+            "file=%s code=%s message=%s",
+            file.filename,
+            error.code,
+            error.message,
+        )
 
         return JSONResponse(
             status_code=400,
@@ -291,6 +433,13 @@ async def process_document(
 
     except TextExtractionError as error:
 
+        logger.error(
+            "Text extraction failed: "
+            "file=%s error=%s",
+            file.filename,
+            str(error),
+        )
+
         return JSONResponse(
             status_code=500,
             content={
@@ -311,6 +460,13 @@ async def process_document(
 
     except ExtractionError as error:
 
+        logger.error(
+            "Structured extraction failed: "
+            "file=%s error=%s",
+            file.filename,
+            str(error),
+        )
+
         return JSONResponse(
             status_code=502,
             content={
@@ -329,12 +485,12 @@ async def process_document(
     # UNEXPECTED ERROR
     # ======================================================
 
-    except Exception as error:
+    except Exception:
 
-        print(
-            "Unexpected document processing error:",
-            type(error).__name__,
-            str(error),
+        logger.exception(
+            "Unexpected document processing error: "
+            "file=%s",
+            file.filename,
         )
 
         return JSONResponse(
@@ -368,6 +524,12 @@ def list_documents(
         get_all_documents(
             db
         )
+    )
+
+    logger.info(
+        "Processed document list requested: "
+        "count=%s",
+        len(documents),
     )
 
     return [
@@ -413,6 +575,11 @@ def get_document(
 
     if document is None:
 
+        logger.warning(
+            "Document not found: %s",
+            document_name,
+        )
+
         return JSONResponse(
             status_code=404,
             content={
@@ -427,6 +594,11 @@ def get_document(
                 }
             },
         )
+
+    logger.info(
+        "Processed document retrieved: %s",
+        document_name,
+    )
 
     return json.loads(
         document.result_json
