@@ -12,6 +12,7 @@ dependencies = [
     "google-genai>=2.23.0",
     "httpx>=0.28.1",
     "pillow>=12.3.0",
+    "psycopg[binary]>=3.3.5",
     "pymupdf>=1.28.2",
     "pypdf>=6.18.0",
     "python-dotenv>=1.2.3",
