@@ -1,0 +1,387 @@
+{
+    "message": "Document processed successfully",
+    "document_name": "batch2-0499.jpg",
+    "document_type": "invoice",
+    "processing_status": "FAILED",
+    "file_validation": {
+      "file_type": "image/jpeg",
+      "is_supported": true,
+      "is_readable": true,
+      "page_count": 1,
+      "status": "PASS"
+    },
+    "text_extraction": {
+      "text": "--- PAGE 1 ---\nTAYLOR CERTIFIED PROCESSING INC 101 B\nDevon Road Invoice: KiranP@taylor-corp.ca\nBRAMPTON\nINVOICE\nTHE ORTHOTIC GROUP INC. 160 Markland Street Invoices ap@ohi.net MARKHAM, Ontario,\nCanada L6C OC6\n# Description\n3M 80 Rubber& Vinyl Spray Adh. Yellow 24 fl oz. 6\ncans/case\nЗМ 570 Seam Sealer WHT 12oz 12 cartridges/case\n10760667-011PW\n03 0485 D/C FilmTp. 1/2\"x98'-1/64 44 rolls/case\n3M 3762LM-PG Hot Melt TAN 1\" × 3\" 22\n04\npounds/case\nNitrile 18756 Medical Glove BLK Medium\n05\nPowder/Latex Free | 100/BX\nQuantity\nPrice\n2\n$8.00\n4\n$14.00\n5\n$6.00\n4\n$7.00\n5\n$3.00\nSubtotal\nSales Tax 8%\nShipping and Handling\nTotal Due\nTotal\n$16.00\n$56.00\n$30.00\n$28.00\n$15.00\n$135.00\n$12.48\n$10.00\n$157.48\nInvoice Details:\nInvoice#: 6825\nInvoice date: Nov 03, 2022\nDue date: Dec 03, 2022\nTerms and conditions:\nPlease send payment within 30 days of receiving this invoice. There will be a 1.5% interest charge per\nmonth on late invoices.",
+      "pages": [
+        {
+          "page_number": 1,
+          "text": "TAYLOR CERTIFIED PROCESSING INC 101 B\nDevon Road Invoice: KiranP@taylor-corp.ca\nBRAMPTON\nINVOICE\nTHE ORTHOTIC GROUP INC. 160 Markland Street Invoices ap@ohi.net MARKHAM, Ontario,\nCanada L6C OC6\n# Description\n3M 80 Rubber& Vinyl Spray Adh. Yellow 24 fl oz. 6\ncans/case\nЗМ 570 Seam Sealer WHT 12oz 12 cartridges/case\n10760667-011PW\n03 0485 D/C FilmTp. 1/2\"x98'-1/64 44 rolls/case\n3M 3762LM-PG Hot Melt TAN 1\" × 3\" 22\n04\npounds/case\nNitrile 18756 Medical Glove BLK Medium\n05\nPowder/Latex Free | 100/BX\nQuantity\nPrice\n2\n$8.00\n4\n$14.00\n5\n$6.00\n4\n$7.00\n5\n$3.00\nSubtotal\nSales Tax 8%\nShipping and Handling\nTotal Due\nTotal\n$16.00\n$56.00\n$30.00\n$28.00\n$15.00\n$135.00\n$12.48\n$10.00\n$157.48\nInvoice Details:\nInvoice#: 6825\nInvoice date: Nov 03, 2022\nDue date: Dec 03, 2022\nTerms and conditions:\nPlease send payment within 30 days of receiving this invoice. There will be a 1.5% interest charge per\nmonth on late invoices.",
+          "extraction_method": "ocr",
+          "ocr_provider": "ocr_space"
+        }
+      ],
+      "ocr_used": true,
+      "ocr_fallback_used": false
+    },
+    "extracted_data": {
+      "invoice_number": {
+        "value": "6825",
+        "evidence": {
+          "source_text": "Invoice#: 6825",
+          "page_number": 1
+        }
+      },
+      "invoice_date": {
+        "value": "Nov 03, 2022",
+        "evidence": {
+          "source_text": "Invoice date: Nov 03, 2022",
+          "page_number": 1
+        }
+      },
+      "due_date": {
+        "value": "Dec 03, 2022",
+        "evidence": {
+          "source_text": "Due date: Dec 03, 2022",
+          "page_number": 1
+        }
+      },
+      "vendor_name": {
+        "value": "TAYLOR CERTIFIED PROCESSING INC",
+        "evidence": {
+          "source_text": "TAYLOR CERTIFIED PROCESSING INC",
+          "page_number": 1
+        }
+      },
+      "customer_name": {
+        "value": "THE ORTHOTIC GROUP INC.",
+        "evidence": {
+          "source_text": "THE ORTHOTIC GROUP INC.",
+          "page_number": 1
+        }
+      },
+      "currency": {
+        "value": "$",
+        "evidence": {
+          "source_text": "$16.00",
+          "page_number": 1
+        }
+      },
+      "subtotal": {
+        "value": 135,
+        "evidence": {
+          "source_text": "Subtotal $135.00",
+          "page_number": 1
+        }
+      },
+      "taxable_amount": {
+        "value": null,
+        "evidence": null
+      },
+      "tax_amount": {
+        "value": 12.48,
+        "evidence": {
+          "source_text": "Sales Tax 8% $12.48",
+          "page_number": 1
+        }
+      },
+      "discount": {
+        "value": null,
+        "evidence": null
+      },
+      "shipping_handling": {
+        "value": 10,
+        "evidence": {
+          "source_text": "Shipping and Handling $10.00",
+          "page_number": 1
+        }
+      },
+      "amount_before_rounding": {
+        "value": null,
+        "evidence": null
+      },
+      "round_off": {
+        "value": null,
+        "evidence": null
+      },
+      "total_amount": {
+        "value": 157.48,
+        "evidence": {
+          "source_text": "Total $157.48",
+          "page_number": 1
+        }
+      },
+      "cash_paid": {
+        "value": null,
+        "evidence": null
+      },
+      "change": {
+        "value": null,
+        "evidence": null
+      },
+      "line_items": [
+        {
+          "description": "3M 80 Rubber& Vinyl Spray Adh. Yellow 24 fl oz. 6 cans/case",
+          "item_code": null,
+          "hsn_sac": null,
+          "quantity": 2,
+          "rate_including_tax": null,
+          "unit_price": 8,
+          "unit": null,
+          "discount_percent": null,
+          "discount_amount": null,
+          "amount": 16,
+          "evidence": {
+            "source_text": "3M 80 Rubber& Vinyl Spray Adh. Yellow 24 fl oz. 6\ncans/case 2 $8.00 $16.00",
+            "page_number": 1
+          }
+        },
+        {
+          "description": "ЗМ 570 Seam Sealer WHT 12oz 12 cartridges/case 10760667-011PW",
+          "item_code": "10760667-011PW",
+          "hsn_sac": null,
+          "quantity": 4,
+          "rate_including_tax": null,
+          "unit_price": 14,
+          "unit": null,
+          "discount_percent": null,
+          "discount_amount": null,
+          "amount": 56,
+          "evidence": {
+            "source_text": "ЗМ 570 Seam Sealer WHT 12oz 12 cartridges/case\n10760667-011PW 4 $14.00 $56.00",
+            "page_number": 1
+          }
+        },
+        {
+          "description": "03 0485 D/C FilmTp. 1/2\"x98'-1/64 44 rolls/case",
+          "item_code": "03 0485",
+          "hsn_sac": null,
+          "quantity": 5,
+          "rate_including_tax": null,
+          "unit_price": 6,
+          "unit": null,
+          "discount_percent": null,
+          "discount_amount": null,
+          "amount": 30,
+          "evidence": {
+            "source_text": "03 0485 D/C FilmTp. 1/2\"x98'-1/64 44 rolls/case 5 $6.00 $30.00",
+            "page_number": 1
+          }
+        },
+        {
+          "description": "3M 3762LM-PG Hot Melt TAN 1\" × 3\" 22 pounds/case",
+          "item_code": "04",
+          "hsn_sac": null,
+          "quantity": 4,
+          "rate_including_tax": null,
+          "unit_price": 7,
+          "unit": null,
+          "discount_percent": null,
+          "discount_amount": null,
+          "amount": 28,
+          "evidence": {
+            "source_text": "3M 3762LM-PG Hot Melt TAN 1\" × 3\" 22\npounds/case 04 4 $7.00 $28.00",
+            "page_number": 1
+          }
+        },
+        {
+          "description": "Nitrile 18756 Medical Glove BLK Medium Powder/Latex Free | 100/BX",
+          "item_code": "05",
+          "hsn_sac": null,
+          "quantity": 5,
+          "rate_including_tax": null,
+          "unit_price": 3,
+          "unit": null,
+          "discount_percent": null,
+          "discount_amount": null,
+          "amount": 15,
+          "evidence": {
+            "source_text": "Nitrile 18756 Medical Glove BLK Medium\nPowder/Latex Free | 100/BX 05 5 $3.00 $15.00",
+            "page_number": 1
+          }
+        }
+      ],
+      "additional_fields": [
+        {
+          "name": "vendor_address",
+          "value": "101 B Devon Road BRAMPTON",
+          "evidence": {
+            "source_text": "101 B\nDevon Road\nBRAMPTON",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "vendor_email",
+          "value": "KiranP@taylor-corp.ca",
+          "evidence": {
+            "source_text": "Invoice: KiranP@taylor-corp.ca",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "customer_address",
+          "value": "160 Markland Street MARKHAM, Ontario, Canada L6C OC6",
+          "evidence": {
+            "source_text": "160 Markland Street Invoices ap@ohi.net MARKHAM, Ontario,\nCanada L6C OC6",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "customer_email",
+          "value": "ap@ohi.net",
+          "evidence": {
+            "source_text": "Invoices ap@ohi.net",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "terms_and_conditions",
+          "value": "Please send payment within 30 days of receiving this invoice. There will be a 1.5% interest charge per month on late invoices.",
+          "evidence": {
+            "source_text": "Please send payment within 30 days of receiving this invoice. There will be a 1.5% interest charge per\nmonth on late invoices.",
+            "page_number": 1
+          }
+        }
+      ]
+    },
+    "financial_validation": {
+      "overall_status": "FAILED",
+      "summary": {
+        "total_checks": 7,
+        "passed": 6,
+        "failed": 1,
+        "not_applicable": 0
+      },
+      "checks": [
+        {
+          "check_id": "line_item_1_calculation",
+          "check_name": "Line item 1 calculation",
+          "formula": "quantity × unit_price = amount",
+          "operands": {
+            "description": "3M 80 Rubber& Vinyl Spray Adh. Yellow 24 fl oz. 6 cans/case",
+            "quantity": 2,
+            "unit_price": 8,
+            "discount_percent": null,
+            "discount_amount": null
+          },
+          "calculated_value": 16,
+          "reported_value": 16,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "line_item_2_calculation",
+          "check_name": "Line item 2 calculation",
+          "formula": "quantity × unit_price = amount",
+          "operands": {
+            "description": "ЗМ 570 Seam Sealer WHT 12oz 12 cartridges/case 10760667-011PW",
+            "quantity": 4,
+            "unit_price": 14,
+            "discount_percent": null,
+            "discount_amount": null
+          },
+          "calculated_value": 56,
+          "reported_value": 56,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "line_item_3_calculation",
+          "check_name": "Line item 3 calculation",
+          "formula": "quantity × unit_price = amount",
+          "operands": {
+            "description": "03 0485 D/C FilmTp. 1/2\"x98'-1/64 44 rolls/case",
+            "quantity": 5,
+            "unit_price": 6,
+            "discount_percent": null,
+            "discount_amount": null
+          },
+          "calculated_value": 30,
+          "reported_value": 30,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "line_item_4_calculation",
+          "check_name": "Line item 4 calculation",
+          "formula": "quantity × unit_price = amount",
+          "operands": {
+            "description": "3M 3762LM-PG Hot Melt TAN 1\" × 3\" 22 pounds/case",
+            "quantity": 4,
+            "unit_price": 7,
+            "discount_percent": null,
+            "discount_amount": null
+          },
+          "calculated_value": 28,
+          "reported_value": 28,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "line_item_5_calculation",
+          "check_name": "Line item 5 calculation",
+          "formula": "quantity × unit_price = amount",
+          "operands": {
+            "description": "Nitrile 18756 Medical Glove BLK Medium Powder/Latex Free | 100/BX",
+            "quantity": 5,
+            "unit_price": 3,
+            "discount_percent": null,
+            "discount_amount": null
+          },
+          "calculated_value": 15,
+          "reported_value": 15,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "subtotal_reconciliation",
+          "check_name": "Line items to subtotal",
+          "formula": "sum(line_item.amount) = subtotal",
+          "operands": {
+            "line_item_amounts": [
+              16,
+              56,
+              30,
+              28,
+              15
+            ],
+            "discount": null
+          },
+          "calculated_value": 145,
+          "reported_value": 135,
+          "variance": 10,
+          "status": "FAIL",
+          "message": "Line item amounts do not reconcile."
+        },
+        {
+          "check_id": "total_reconciliation",
+          "check_name": "Invoice total reconciliation",
+          "formula": "subtotal + tax_amount + shipping_handling - discount + round_off = total",
+          "operands": {
+            "subtotal": 135,
+            "tax_amount": 12.48,
+            "shipping_handling": 10,
+            "discount": null,
+            "amount_before_rounding": null,
+            "round_off": null
+          },
+          "calculated_value": 157.48,
+          "reported_value": 157.48,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Invoice total reconciles."
+        }
+      ]
+    },
+    "processing_metadata": {
+      "ocr_used": true,
+      "ocr_fallback_used": false,
+      "processed_at": "2026-09-12T03:42:27.056602+00:00",
+      "processing_time_ms": 9856
+    }
+  }
+  

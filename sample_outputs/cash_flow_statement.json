@@ -1,0 +1,882 @@
+{
+    "message": "Document processed successfully",
+    "document_name": "Consolidated Cash Flow Statement 2017.pdf",
+    "document_type": "cash_flow_statement",
+    "processing_status": "PASS",
+    "file_validation": {
+      "file_type": "application/pdf",
+      "is_supported": true,
+      "is_readable": true,
+      "page_count": 2,
+      "status": "PASS"
+    },
+    "text_extraction": {
+      "text": "--- PAGE 1 ---\nConsolidated Cash Flow Statement\nFor the year ended March 31, 2017\n\n* in `000\nYear ended\n31-Mar-17\nYear ended\n31-Mar-16\n\nCash flows from operating activities\n\nConsolidated profit before income tax\n233,311,478\n194,949,948\nAdjustments for:\nDepreciation on fixed assets\n8,861,876\n7,380,326\n(Profit) / loss on revaluation of investments\n(87,543)\n173,689\nAmortisation of premia on held to maturity investments\n1,756,569\n1,002,801\n(Profit) / loss on sale of fixed assets\n16,229\n1,185\nProvision / charge for non performing assets\n37,024,296\n25,179,864\nProvision for dimunition in value of Investments\n(76,417)\n146,543\nFloating provisions\n250,000\n1,150,000\nProvision for standard assets\n4,312,322\n4,648,890\nContingency provisions\n388,440\n218,602\nShare in current year's profits of associates\n(23,393)\n(37,278)\n285,733,857\n234,814,570\n\nAdjustments for:\n(Increase) / decrease in investments (excluding investments in subsidiaries)\n(173,257,700)\n(391,159,616)\n(Increase) / decrease in advances\n(1,018,904,990)\n(1,066,012,996)\nIncrease / (decrease) in deposits\n972,609,590\n955,896,412\n(Increase) / decrease in other assets\n(44,855,329)\n(38,485,747)\nIncrease / (decrease) in other liabilities and provisions\n228,337,692\n31,324,658\n249,663,120\n(273,622,719)\nDirect taxes paid (net of refunds)\n(76,847,189)\n(70,730,944)\nNet cash flow (used in) / from operating activities\n172,815,931\n(344,353,663)\n\nCash flows used in investing activities\nPurchase of fixed assets\n(11,577,570)\n(8,771,635)\nProceeds from sale of fixed assets\n100,768\n116,125\nInvestment in subsidiaries and / or joint ventures\n-\n-\nNet cash used in investing activities\n(11,476,802)\n(8,655,510)\n\nHDFC BANK\nHDFC Bank Limited Annual Report 2016-17\n150\nWe understand your world\n\n--- PAGE 2 ---\nConsolidated Cash Flow Statement\n\nFor the year ended March 31, 2017\n\n*   *in '000*\n*   Year ended 31-Mar-17\n*   Year ended 31-Mar-16\n\n**Cash flows from financing activities**\n\n*   Increase in minority interest\n    *   818,605\n    *   189,954\n*   Money received on exercise of stock options by employees\n    *   22,615,161\n    *   12,229,008\n*   Increase / (decrease) in borrowings (excluding subordinate debt, perpetual debt and upper tier II instruments)\n    *   (33,898,658)\n    *   402,081,134\n*   Redemption of subordinated debt\n    *   (19,084,500)\n    *   (12,020,000)\n*   Dividend paid during the year\n    *   (24,083,093)\n    *   (20,091,666)\n*   Tax on dividend\n    *   (5,297,258)\n    *   (4,237,089)\n*   **Net cash generated from financing activities**\n    *   **(58,929,743)**\n    *   **378,151,341**\n*   **Effect of exchange fluctuation on translation reserve**\n    *   **(282,622)**\n    *   **282,433**\n*   **Cash and cash equivalents on amalgamation [Refer Schedule 18(1)]**\n    *   **295,617**\n    *   **-**\n*   **Net increase / (decrease) in cash and cash equivalents**\n    *   **102,422,381**\n    *   **25,424,601**\n*   **Cash and cash equivalents as at April 1st (Schedules 6 and 7)**\n    *   **390,688,815**\n    *   **365,264,214**\n*   **Cash and cash equivalents as at March 31st (Schedules 6 and 7)**\n    *   **493,111,196**\n    *   **390,688,815**\n\nAs per our report of even date.\n\n**For Deloitte Haskins & Sells**\n*Chartered Accountants*\n\n**P. B. Pardiwalla**\n*Partner*\nMembership No.: 40005\n\n**Mumbai, April 21, 2017**\n\nFor and on behalf of the Board\n\n**Shyamala Gopinath**\n*Chairperson*\n\n**Paresh Sukthankar**\n*Deputy Managing Director*\n\n**Sanjay Dongre**\n*Executive Vice President*\n*(Legal) & Company Secretary*\n\n**Aditya Puri**\n*Managing Director*\n\n**Kaizad Bharucha**\n*Executive Director*\n\n**Sashidhar Jagdishan**\n*Chief Financial Officer*\n\n**Anami Roy**\n**Bobby Parikh**\n**Keki Mistry**\n**Malay Patel**\n**Partho Datta**\n**Renu Karnad**\n**Srikanth Nadhamuni**\n**Umesh Sarangi**\n*Directors*\n\nHDFC Bank Limited Annual Report 2016-17\n151\nHDFC BANK\nWe understand your world",
+      "pages": [
+        {
+          "page_number": 1,
+          "text": "Consolidated Cash Flow Statement\nFor the year ended March 31, 2017\n\n* in `000\nYear ended\n31-Mar-17\nYear ended\n31-Mar-16\n\nCash flows from operating activities\n\nConsolidated profit before income tax\n233,311,478\n194,949,948\nAdjustments for:\nDepreciation on fixed assets\n8,861,876\n7,380,326\n(Profit) / loss on revaluation of investments\n(87,543)\n173,689\nAmortisation of premia on held to maturity investments\n1,756,569\n1,002,801\n(Profit) / loss on sale of fixed assets\n16,229\n1,185\nProvision / charge for non performing assets\n37,024,296\n25,179,864\nProvision for dimunition in value of Investments\n(76,417)\n146,543\nFloating provisions\n250,000\n1,150,000\nProvision for standard assets\n4,312,322\n4,648,890\nContingency provisions\n388,440\n218,602\nShare in current year's profits of associates\n(23,393)\n(37,278)\n285,733,857\n234,814,570\n\nAdjustments for:\n(Increase) / decrease in investments (excluding investments in subsidiaries)\n(173,257,700)\n(391,159,616)\n(Increase) / decrease in advances\n(1,018,904,990)\n(1,066,012,996)\nIncrease / (decrease) in deposits\n972,609,590\n955,896,412\n(Increase) / decrease in other assets\n(44,855,329)\n(38,485,747)\nIncrease / (decrease) in other liabilities and provisions\n228,337,692\n31,324,658\n249,663,120\n(273,622,719)\nDirect taxes paid (net of refunds)\n(76,847,189)\n(70,730,944)\nNet cash flow (used in) / from operating activities\n172,815,931\n(344,353,663)\n\nCash flows used in investing activities\nPurchase of fixed assets\n(11,577,570)\n(8,771,635)\nProceeds from sale of fixed assets\n100,768\n116,125\nInvestment in subsidiaries and / or joint ventures\n-\n-\nNet cash used in investing activities\n(11,476,802)\n(8,655,510)\n\nHDFC BANK\nHDFC Bank Limited Annual Report 2016-17\n150\nWe understand your world",
+          "extraction_method": "ocr",
+          "ocr_provider": "gemini_vision"
+        },
+        {
+          "page_number": 2,
+          "text": "Consolidated Cash Flow Statement\n\nFor the year ended March 31, 2017\n\n*   *in '000*\n*   Year ended 31-Mar-17\n*   Year ended 31-Mar-16\n\n**Cash flows from financing activities**\n\n*   Increase in minority interest\n    *   818,605\n    *   189,954\n*   Money received on exercise of stock options by employees\n    *   22,615,161\n    *   12,229,008\n*   Increase / (decrease) in borrowings (excluding subordinate debt, perpetual debt and upper tier II instruments)\n    *   (33,898,658)\n    *   402,081,134\n*   Redemption of subordinated debt\n    *   (19,084,500)\n    *   (12,020,000)\n*   Dividend paid during the year\n    *   (24,083,093)\n    *   (20,091,666)\n*   Tax on dividend\n    *   (5,297,258)\n    *   (4,237,089)\n*   **Net cash generated from financing activities**\n    *   **(58,929,743)**\n    *   **378,151,341**\n*   **Effect of exchange fluctuation on translation reserve**\n    *   **(282,622)**\n    *   **282,433**\n*   **Cash and cash equivalents on amalgamation [Refer Schedule 18(1)]**\n    *   **295,617**\n    *   **-**\n*   **Net increase / (decrease) in cash and cash equivalents**\n    *   **102,422,381**\n    *   **25,424,601**\n*   **Cash and cash equivalents as at April 1st (Schedules 6 and 7)**\n    *   **390,688,815**\n    *   **365,264,214**\n*   **Cash and cash equivalents as at March 31st (Schedules 6 and 7)**\n    *   **493,111,196**\n    *   **390,688,815**\n\nAs per our report of even date.\n\n**For Deloitte Haskins & Sells**\n*Chartered Accountants*\n\n**P. B. Pardiwalla**\n*Partner*\nMembership No.: 40005\n\n**Mumbai, April 21, 2017**\n\nFor and on behalf of the Board\n\n**Shyamala Gopinath**\n*Chairperson*\n\n**Paresh Sukthankar**\n*Deputy Managing Director*\n\n**Sanjay Dongre**\n*Executive Vice President*\n*(Legal) & Company Secretary*\n\n**Aditya Puri**\n*Managing Director*\n\n**Kaizad Bharucha**\n*Executive Director*\n\n**Sashidhar Jagdishan**\n*Chief Financial Officer*\n\n**Anami Roy**\n**Bobby Parikh**\n**Keki Mistry**\n**Malay Patel**\n**Partho Datta**\n**Renu Karnad**\n**Srikanth Nadhamuni**\n**Umesh Sarangi**\n*Directors*\n\nHDFC Bank Limited Annual Report 2016-17\n151\nHDFC BANK\nWe understand your world",
+          "extraction_method": "ocr",
+          "ocr_provider": "gemini_vision"
+        }
+      ],
+      "ocr_used": true,
+      "ocr_fallback_used": true
+    },
+    "extracted_data": {
+      "company_name": {
+        "value": "HDFC Bank Limited",
+        "evidence": {
+          "source_text": "HDFC Bank Limited Annual Report 2016-17",
+          "page_number": 1
+        }
+      },
+      "statement_title": {
+        "value": "Consolidated Cash Flow Statement",
+        "evidence": {
+          "source_text": "Consolidated Cash Flow Statement",
+          "page_number": 1
+        }
+      },
+      "statement_date": {
+        "value": "For the year ended March 31, 2017",
+        "evidence": {
+          "source_text": "For the year ended March 31, 2017",
+          "page_number": 1
+        }
+      },
+      "currency": {
+        "value": "in `000",
+        "evidence": {
+          "source_text": "* in `000",
+          "page_number": 1
+        }
+      },
+      "periods": [
+        "Year ended 31-Mar-17",
+        "Year ended 31-Mar-16"
+      ],
+      "operating_cash_flow": [
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 172815931,
+          "evidence": {
+            "source_text": "Net cash flow (used in) / from operating activities\n172,815,931",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-16",
+          "value": -344353663,
+          "evidence": {
+            "source_text": "(344,353,663)",
+            "page_number": 1
+          }
+        }
+      ],
+      "investing_cash_flow": [
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": -11476802,
+          "evidence": {
+            "source_text": "Net cash used in investing activities\n(11,476,802)",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-16",
+          "value": -8655510,
+          "evidence": {
+            "source_text": "(8,655,510)",
+            "page_number": 1
+          }
+        }
+      ],
+      "financing_cash_flow": [
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": -58929743,
+          "evidence": {
+            "source_text": "Net cash generated from financing activities\n(58,929,743)",
+            "page_number": 2
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-16",
+          "value": 378151341,
+          "evidence": {
+            "source_text": "378,151,341",
+            "page_number": 2
+          }
+        }
+      ],
+      "fx_translation_adjustment": [
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": -282622,
+          "evidence": {
+            "source_text": "Effect of exchange fluctuation on translation reserve\n(282,622)",
+            "page_number": 2
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-16",
+          "value": 282433,
+          "evidence": {
+            "source_text": "282,433",
+            "page_number": 2
+          }
+        }
+      ],
+      "net_change_in_cash": [
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 102422381,
+          "evidence": {
+            "source_text": "Net increase / (decrease) in cash and cash equivalents\n102,422,381",
+            "page_number": 2
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-16",
+          "value": 25424601,
+          "evidence": {
+            "source_text": "25,424,601",
+            "page_number": 2
+          }
+        }
+      ],
+      "opening_cash": [
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 390688815,
+          "evidence": {
+            "source_text": "Cash and cash equivalents as at April 1st (Schedules 6 and 7)\n390,688,815",
+            "page_number": 2
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-16",
+          "value": 365264214,
+          "evidence": {
+            "source_text": "365,264,214",
+            "page_number": 2
+          }
+        }
+      ],
+      "closing_cash": [
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 493111196,
+          "evidence": {
+            "source_text": "Cash and cash equivalents as at March 31st (Schedules 6 and 7)\n493,111,196",
+            "page_number": 2
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-16",
+          "value": 390688815,
+          "evidence": {
+            "source_text": "390,688,815",
+            "page_number": 2
+          }
+        }
+      ],
+      "cash_balance_adjustments": [
+        {
+          "name": "Cash and cash equivalents on amalgamation [Refer Schedule 18(1)]",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 295617,
+              "evidence": {
+                "source_text": "Cash and cash equivalents on amalgamation [Refer Schedule 18(1)]\n295,617",
+                "page_number": 2
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": null,
+              "evidence": {
+                "source_text": "-\n-",
+                "page_number": 2
+              }
+            }
+          ]
+        }
+      ],
+      "line_items": [
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Consolidated profit before income tax",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 233311478,
+              "evidence": {
+                "source_text": "Consolidated profit before income tax\n233,311,478",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 194949948,
+              "evidence": {
+                "source_text": "194,949,948",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Depreciation on fixed assets",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 8861876,
+              "evidence": {
+                "source_text": "Depreciation on fixed assets\n8,861,876",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 7380326,
+              "evidence": {
+                "source_text": "7,380,326",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "(Profit) / loss on revaluation of investments",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -87543,
+              "evidence": {
+                "source_text": "(Profit) / loss on revaluation of investments\n(87,543)",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 173689,
+              "evidence": {
+                "source_text": "173,689",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Amortisation of premia on held to maturity investments",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 1756569,
+              "evidence": {
+                "source_text": "Amortisation of premia on held to maturity investments\n1,756,569",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 1002801,
+              "evidence": {
+                "source_text": "1,002,801",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "(Profit) / loss on sale of fixed assets",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 16229,
+              "evidence": {
+                "source_text": "(Profit) / loss on sale of fixed assets\n16,229",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 1185,
+              "evidence": {
+                "source_text": "1,185",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Provision / charge for non performing assets",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 37024296,
+              "evidence": {
+                "source_text": "Provision / charge for non performing assets\n37,024,296",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 25179864,
+              "evidence": {
+                "source_text": "25,179,864",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Provision for dimunition in value of Investments",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -76417,
+              "evidence": {
+                "source_text": "Provision for dimunition in value of Investments\n(76,417)",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 146543,
+              "evidence": {
+                "source_text": "146,543",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Floating provisions",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 250000,
+              "evidence": {
+                "source_text": "Floating provisions\n250,000",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 1150000,
+              "evidence": {
+                "source_text": "1,150,000",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Provision for standard assets",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 4312322,
+              "evidence": {
+                "source_text": "Provision for standard assets\n4,312,322",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 4648890,
+              "evidence": {
+                "source_text": "4,648,890",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Contingency provisions",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 388440,
+              "evidence": {
+                "source_text": "Contingency provisions\n388,440",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 218602,
+              "evidence": {
+                "source_text": "218,602",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Share in current year's profits of associates",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -23393,
+              "evidence": {
+                "source_text": "Share in current year's profits of associates\n(23,393)",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": -37278,
+              "evidence": {
+                "source_text": "(37,278)",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "(Increase) / decrease in investments (excluding investments in subsidiaries)",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -173257700,
+              "evidence": {
+                "source_text": "(Increase) / decrease in investments (excluding investments in subsidiaries)\n(173,257,700)",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": -391159616,
+              "evidence": {
+                "source_text": "(391,159,616)",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "(Increase) / decrease in advances",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -1018904990,
+              "evidence": {
+                "source_text": "(Increase) / decrease in advances\n(1,018,904,990)",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": -1066012996,
+              "evidence": {
+                "source_text": "(1,066,012,996)",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Increase / (decrease) in deposits",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 972609590,
+              "evidence": {
+                "source_text": "Increase / (decrease) in deposits\n972,609,590",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 955896412,
+              "evidence": {
+                "source_text": "955,896,412",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "(Increase) / decrease in other assets",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -44855329,
+              "evidence": {
+                "source_text": "(Increase) / decrease in other assets\n(44,855,329)",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": -38485747,
+              "evidence": {
+                "source_text": "(38,485,747)",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Increase / (decrease) in other liabilities and provisions",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 228337692,
+              "evidence": {
+                "source_text": "Increase / (decrease) in other liabilities and provisions\n228,337,692",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 31324658,
+              "evidence": {
+                "source_text": "31,324,658",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from operating activities",
+          "name": "Direct taxes paid (net of refunds)",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -76847189,
+              "evidence": {
+                "source_text": "Direct taxes paid (net of refunds)\n(76,847,189)",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": -70730944,
+              "evidence": {
+                "source_text": "(70,730,944)",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows used in investing activities",
+          "name": "Purchase of fixed assets",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -11577570,
+              "evidence": {
+                "source_text": "Purchase of fixed assets\n(11,577,570)",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": -8771635,
+              "evidence": {
+                "source_text": "(8,771,635)",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows used in investing activities",
+          "name": "Proceeds from sale of fixed assets",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 100768,
+              "evidence": {
+                "source_text": "Proceeds from sale of fixed assets\n100,768",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 116125,
+              "evidence": {
+                "source_text": "116,125",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows used in investing activities",
+          "name": "Investment in subsidiaries and / or joint ventures",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": null,
+              "evidence": {
+                "source_text": "Investment in subsidiaries and / or joint ventures\n-\n-",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": null,
+              "evidence": {
+                "source_text": "Investment in subsidiaries and / or joint ventures\n-\n-",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from financing activities",
+          "name": "Increase in minority interest",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 818605,
+              "evidence": {
+                "source_text": "Increase in minority interest\n818,605",
+                "page_number": 2
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 189954,
+              "evidence": {
+                "source_text": "189,954",
+                "page_number": 2
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from financing activities",
+          "name": "Money received on exercise of stock options by employees",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 22615161,
+              "evidence": {
+                "source_text": "Money received on exercise of stock options by employees\n22,615,161",
+                "page_number": 2
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 12229008,
+              "evidence": {
+                "source_text": "12,229,008",
+                "page_number": 2
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from financing activities",
+          "name": "Increase / (decrease) in borrowings (excluding subordinate debt, perpetual debt and upper tier II instruments)",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -33898658,
+              "evidence": {
+                "source_text": "Increase / (decrease) in borrowings (excluding subordinate debt, perpetual debt and upper tier II instruments)\n(33,898,658)",
+                "page_number": 2
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": 402081134,
+              "evidence": {
+                "source_text": "402,081,134",
+                "page_number": 2
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from financing activities",
+          "name": "Redemption of subordinated debt",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -19084500,
+              "evidence": {
+                "source_text": "Redemption of subordinated debt\n(19,084,500)",
+                "page_number": 2
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": -12020000,
+              "evidence": {
+                "source_text": "(12,020,000)",
+                "page_number": 2
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from financing activities",
+          "name": "Dividend paid during the year",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -24083093,
+              "evidence": {
+                "source_text": "Dividend paid during the year\n(24,083,093)",
+                "page_number": 2
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": -20091666,
+              "evidence": {
+                "source_text": "(20,091,666)",
+                "page_number": 2
+              }
+            }
+          ]
+        },
+        {
+          "section": "Cash flows from financing activities",
+          "name": "Tax on dividend",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": -5297258,
+              "evidence": {
+                "source_text": "Tax on dividend\n(5,297,258)",
+                "page_number": 2
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-16",
+              "value": -4237089,
+              "evidence": {
+                "source_text": "(4,237,089)",
+                "page_number": 2
+              }
+            }
+          ]
+        }
+      ],
+      "additional_fields": []
+    },
+    "financial_validation": {
+      "overall_status": "PASS",
+      "summary": {
+        "total_checks": 4,
+        "passed": 4,
+        "failed": 0,
+        "not_applicable": 0
+      },
+      "checks": [
+        {
+          "check_id": "cash_flow_net_change_Year ended 31-Mar-17",
+          "check_name": "Net Change in Cash",
+          "formula": "operating_cash_flow + investing_cash_flow + financing_cash_flow + fx_translation_adjustment + pre_net_change_adjustments = net_change_in_cash",
+          "period": "Year ended 31-Mar-17",
+          "operands": {
+            "operating_cash_flow": 172815931,
+            "investing_cash_flow": -11476802,
+            "financing_cash_flow": -58929743,
+            "fx_translation_adjustment": -282622,
+            "pre_net_change_adjustments": [
+              {
+                "name": "Cash and cash equivalents on amalgamation [Refer Schedule 18(1)]",
+                "value": 295617,
+                "status": "PRESENT",
+                "placement": "BEFORE_NET_CHANGE"
+              }
+            ]
+          },
+          "calculated_value": 102422381,
+          "reported_value": 102422381,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "cash_flow_net_change_Year ended 31-Mar-16",
+          "check_name": "Net Change in Cash",
+          "formula": "operating_cash_flow + investing_cash_flow + financing_cash_flow + fx_translation_adjustment = net_change_in_cash",
+          "period": "Year ended 31-Mar-16",
+          "operands": {
+            "operating_cash_flow": -344353663,
+            "investing_cash_flow": -8655510,
+            "financing_cash_flow": 378151341,
+            "fx_translation_adjustment": 282433,
+            "pre_net_change_adjustments": []
+          },
+          "calculated_value": 25424601,
+          "reported_value": 25424601,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "cash_flow_closing_cash_Year ended 31-Mar-17",
+          "check_name": "Closing Cash Reconciliation",
+          "formula": "opening_cash + net_change_in_cash = closing_cash",
+          "period": "Year ended 31-Mar-17",
+          "operands": {
+            "opening_cash": 390688815,
+            "net_change_in_cash": 102422381,
+            "post_net_change_adjustments": []
+          },
+          "calculated_value": 493111196,
+          "reported_value": 493111196,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "cash_flow_closing_cash_Year ended 31-Mar-16",
+          "check_name": "Closing Cash Reconciliation",
+          "formula": "opening_cash + net_change_in_cash = closing_cash",
+          "period": "Year ended 31-Mar-16",
+          "operands": {
+            "opening_cash": 365264214,
+            "net_change_in_cash": 25424601,
+            "post_net_change_adjustments": []
+          },
+          "calculated_value": 390688815,
+          "reported_value": 390688815,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        }
+      ]
+    },
+    "processing_metadata": {
+      "ocr_used": true,
+      "ocr_fallback_used": true,
+      "processed_at": "2026-09-12T03:47:10.861136+00:00",
+      "processing_time_ms": 93698
+    }
+  }

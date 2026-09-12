@@ -1,0 +1,423 @@
+{
+    "message": "Document processed successfully",
+    "document_name": "batch3-1354.jpg",
+    "document_type": "invoice",
+    "processing_status": "PASS",
+    "file_validation": {
+      "file_type": "image/jpeg",
+      "is_supported": true,
+      "is_readable": true,
+      "page_count": 1,
+      "status": "PASS"
+    },
+    "text_extraction": {
+      "text": "--- PAGE 1 ---\nLES VENTES A.E. BLAKE\nA.E. BLAKE SALES\nInvoice - Facture\nVendu à - Sold To\nOz Optics Ltd.\n219 Westbrook Road\nAP@ozoptics.com\nCARP, Ontario, Canada\nKOA 1L0\nCOMPTE CLIENT/\nCUSTOMER ACCOUNT\n10102028\nTERMES/\nTERMS\nNet 30 Days\n#\n30\nITEM\n100237\n40\n100237\nBON D'ACHAT CLIENT/\nCUSTOMER PO\n292539\nREPRÉSENTANT/\nREPRESENTATIVE\nPerry Chan OR Jeff Kang\nDESCRIPTION\nBC 27767\nAraldite 2014 HT Epoxy Paste GRAY 50ml 2:1\n6 cartridges/box |\n120 cartridges/case\nBC/REF# BC 27767\nD.O.E on products\nBC 27767\nAraldite 2014 HT Epoxy Paste GRAY 50ml 2:1\n6 cartridges/box ||\n120 cartridges/case\nBC/REF# BC 27767\nD.O.E on products\nA.E. Blake Sales Ltd.\n100 Consilium Place\nSuite 200\nTel. 416 431 0440\nFax. 416 431 0450\norontosales@aeblake.c\nwww.aeblake.c\nNO:\n138236\nDATE: Jan 06 2022\nLivré à - Ship To\nOz Optics Ltd.\n219 Westbrook Road\nAP@ozoptics.com\nCARP, Ontario, Canada\nDATE COMMANDÉ/\nORDER DATE\nJun 24 2021\nCOMMANDE AEB/\nAEB ORDER\n50001506\nCONDITIONS D'EXPÉDITION/ LIVRÉ PAR/\nSHIPPING TERMS\nSHIP VIA\nOrigin\nUPS 3rd Party 139 2X5\nExpedited\nQTÉ/QTY\n24\nPRIX/PRICE\n$23.50\nU/M\nKIT\nEXTENSION\n$564.00\n24\n$23.50KIT\n$564.00\nCourrier / Carrier: UPS CANADA\nWaybill: 1Z6419X22090745749\nAEB Reference Quote# 50001502-6980 EXPEDITED\nhttp://www.aeblake.ca/en/terms.php\nMerci - Thank you Votre contact - Your contact: DRAKE\nNo. T.P.S. - G.S.T. No. : R100064716 No. T.V.Q. - Q.S.T. No. : M1000098741TQ0001JT\nMontréal - Toronto\nBon d'emballage / Packing Slip: 50001506-9905\nDate D'expédition / Shipping Date: Jan 06 2022\nS. Total: $ 1,128.00\n13% HST:\n$ 146.64\nTotal: $ 1,274.64\nCAD\nPage 1/1",
+      "pages": [
+        {
+          "page_number": 1,
+          "text": "LES VENTES A.E. BLAKE\nA.E. BLAKE SALES\nInvoice - Facture\nVendu à - Sold To\nOz Optics Ltd.\n219 Westbrook Road\nAP@ozoptics.com\nCARP, Ontario, Canada\nKOA 1L0\nCOMPTE CLIENT/\nCUSTOMER ACCOUNT\n10102028\nTERMES/\nTERMS\nNet 30 Days\n#\n30\nITEM\n100237\n40\n100237\nBON D'ACHAT CLIENT/\nCUSTOMER PO\n292539\nREPRÉSENTANT/\nREPRESENTATIVE\nPerry Chan OR Jeff Kang\nDESCRIPTION\nBC 27767\nAraldite 2014 HT Epoxy Paste GRAY 50ml 2:1\n6 cartridges/box |\n120 cartridges/case\nBC/REF# BC 27767\nD.O.E on products\nBC 27767\nAraldite 2014 HT Epoxy Paste GRAY 50ml 2:1\n6 cartridges/box ||\n120 cartridges/case\nBC/REF# BC 27767\nD.O.E on products\nA.E. Blake Sales Ltd.\n100 Consilium Place\nSuite 200\nTel. 416 431 0440\nFax. 416 431 0450\norontosales@aeblake.c\nwww.aeblake.c\nNO:\n138236\nDATE: Jan 06 2022\nLivré à - Ship To\nOz Optics Ltd.\n219 Westbrook Road\nAP@ozoptics.com\nCARP, Ontario, Canada\nDATE COMMANDÉ/\nORDER DATE\nJun 24 2021\nCOMMANDE AEB/\nAEB ORDER\n50001506\nCONDITIONS D'EXPÉDITION/ LIVRÉ PAR/\nSHIPPING TERMS\nSHIP VIA\nOrigin\nUPS 3rd Party 139 2X5\nExpedited\nQTÉ/QTY\n24\nPRIX/PRICE\n$23.50\nU/M\nKIT\nEXTENSION\n$564.00\n24\n$23.50KIT\n$564.00\nCourrier / Carrier: UPS CANADA\nWaybill: 1Z6419X22090745749\nAEB Reference Quote# 50001502-6980 EXPEDITED\nhttp://www.aeblake.ca/en/terms.php\nMerci - Thank you Votre contact - Your contact: DRAKE\nNo. T.P.S. - G.S.T. No. : R100064716 No. T.V.Q. - Q.S.T. No. : M1000098741TQ0001JT\nMontréal - Toronto\nBon d'emballage / Packing Slip: 50001506-9905\nDate D'expédition / Shipping Date: Jan 06 2022\nS. Total: $ 1,128.00\n13% HST:\n$ 146.64\nTotal: $ 1,274.64\nCAD\nPage 1/1",
+          "extraction_method": "ocr",
+          "ocr_provider": "ocr_space"
+        }
+      ],
+      "ocr_used": true,
+      "ocr_fallback_used": false
+    },
+    "extracted_data": {
+      "invoice_number": {
+        "value": "138236",
+        "evidence": {
+          "source_text": "NO:\n138236",
+          "page_number": 1
+        }
+      },
+      "invoice_date": {
+        "value": "Jan 06 2022",
+        "evidence": {
+          "source_text": "DATE: Jan 06 2022",
+          "page_number": 1
+        }
+      },
+      "due_date": {
+        "value": null,
+        "evidence": null
+      },
+      "vendor_name": {
+        "value": "LES VENTES A.E. BLAKE\nA.E. BLAKE SALES",
+        "evidence": {
+          "source_text": "LES VENTES A.E. BLAKE\nA.E. BLAKE SALES",
+          "page_number": 1
+        }
+      },
+      "customer_name": {
+        "value": "Oz Optics Ltd.",
+        "evidence": {
+          "source_text": "Oz Optics Ltd.",
+          "page_number": 1
+        }
+      },
+      "currency": {
+        "value": "CAD",
+        "evidence": {
+          "source_text": "CAD",
+          "page_number": 1
+        }
+      },
+      "subtotal": {
+        "value": 1128,
+        "evidence": {
+          "source_text": "S. Total: $ 1,128.00",
+          "page_number": 1
+        }
+      },
+      "taxable_amount": {
+        "value": null,
+        "evidence": null
+      },
+      "tax_amount": {
+        "value": 146.64,
+        "evidence": {
+          "source_text": "13% HST:\n$ 146.64",
+          "page_number": 1
+        }
+      },
+      "discount": {
+        "value": null,
+        "evidence": null
+      },
+      "shipping_handling": {
+        "value": null,
+        "evidence": null
+      },
+      "amount_before_rounding": {
+        "value": null,
+        "evidence": null
+      },
+      "round_off": {
+        "value": null,
+        "evidence": null
+      },
+      "total_amount": {
+        "value": 1274.64,
+        "evidence": {
+          "source_text": "Total: $ 1,274.64",
+          "page_number": 1
+        }
+      },
+      "cash_paid": {
+        "value": null,
+        "evidence": null
+      },
+      "change": {
+        "value": null,
+        "evidence": null
+      },
+      "line_items": [
+        {
+          "description": "BC 27767\nAraldite 2014 HT Epoxy Paste GRAY 50ml 2:1\n6 cartridges/box |\n120 cartridges/case\nBC/REF# BC 27767\nD.O.E on products",
+          "item_code": "100237",
+          "hsn_sac": null,
+          "quantity": 24,
+          "rate_including_tax": null,
+          "unit_price": 23.5,
+          "unit": "KIT",
+          "discount_percent": null,
+          "discount_amount": null,
+          "amount": 564,
+          "evidence": {
+            "source_text": "30\nITEM\n100237\nDESCRIPTION\nBC 27767\nAraldite 2014 HT Epoxy Paste GRAY 50ml 2:1\n6 cartridges/box |\n120 cartridges/case\nBC/REF# BC 27767\nD.O.E on products\nQTÉ/QTY\n24\nPRIX/PRICE\n$23.50\nU/M\nKIT\nEXTENSION\n$564.00",
+            "page_number": 1
+          }
+        },
+        {
+          "description": "BC 27767\nAraldite 2014 HT Epoxy Paste GRAY 50ml 2:1\n6 cartridges/box ||\n120 cartridges/case\nBC/REF# BC 27767\nD.O.E on products",
+          "item_code": "100237",
+          "hsn_sac": null,
+          "quantity": 24,
+          "rate_including_tax": null,
+          "unit_price": 23.5,
+          "unit": "KIT",
+          "discount_percent": null,
+          "discount_amount": null,
+          "amount": 564,
+          "evidence": {
+            "source_text": "40\n100237\nBC 27767\nAraldite 2014 HT Epoxy Paste GRAY 50ml 2:1\n6 cartridges/box ||\n120 cartridges/case\nBC/REF# BC 27767\nD.O.E on products\n24\n$23.50KIT\n$564.00",
+            "page_number": 1
+          }
+        }
+      ],
+      "additional_fields": [
+        {
+          "name": "sold_to_address",
+          "value": "219 Westbrook Road, AP@ozoptics.com, CARP, Ontario, Canada, KOA 1L0",
+          "evidence": {
+            "source_text": "Oz Optics Ltd.\n219 Westbrook Road\nAP@ozoptics.com\nCARP, Ontario, Canada\nKOA 1L0",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "ship_to_address",
+          "value": "Oz Optics Ltd., 219 Westbrook Road, AP@ozoptics.com, CARP, Ontario, Canada",
+          "evidence": {
+            "source_text": "Livré à - Ship To\nOz Optics Ltd.\n219 Westbrook Road\nAP@ozoptics.com\nCARP, Ontario, Canada",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "customer_account",
+          "value": "10102028",
+          "evidence": {
+            "source_text": "COMPTE CLIENT/\nCUSTOMER ACCOUNT\n10102028",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "terms",
+          "value": "Net 30 Days",
+          "evidence": {
+            "source_text": "TERMES/\nTERMS\nNet 30 Days",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "customer_po",
+          "value": "292539",
+          "evidence": {
+            "source_text": "BON D'ACHAT CLIENT/\nCUSTOMER PO\n292539",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "representative",
+          "value": "Perry Chan OR Jeff Kang",
+          "evidence": {
+            "source_text": "REPRÉSENTANT/\nREPRESENTATIVE\nPerry Chan OR Jeff Kang",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "vendor_address",
+          "value": "100 Consilium Place, Suite 200",
+          "evidence": {
+            "source_text": "A.E. Blake Sales Ltd.\n100 Consilium Place\nSuite 200",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "vendor_phone",
+          "value": "416 431 0440",
+          "evidence": {
+            "source_text": "Tel. 416 431 0440",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "vendor_fax",
+          "value": "416 431 0450",
+          "evidence": {
+            "source_text": "Fax. 416 431 0450",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "vendor_email",
+          "value": "orontosales@aeblake.c",
+          "evidence": {
+            "source_text": "orontosales@aeblake.c",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "vendor_website",
+          "value": "www.aeblake.c",
+          "evidence": {
+            "source_text": "www.aeblake.c",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "order_date",
+          "value": "Jun 24 2021",
+          "evidence": {
+            "source_text": "DATE COMMANDÉ/\nORDER DATE\nJun 24 2021",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "aeb_order",
+          "value": "50001506",
+          "evidence": {
+            "source_text": "COMMANDE AEB/\nAEB ORDER\n50001506",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "shipping_terms",
+          "value": "Origin",
+          "evidence": {
+            "source_text": "CONDITIONS D'EXPÉDITION/\nSHIPPING TERMS\nOrigin",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "ship_via",
+          "value": "UPS 3rd Party 139 2X5 Expedited",
+          "evidence": {
+            "source_text": "LIVRÉ PAR/\nSHIP VIA\nUPS 3rd Party 139 2X5\nExpedited",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "carrier",
+          "value": "UPS CANADA",
+          "evidence": {
+            "source_text": "Courrier / Carrier: UPS CANADA",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "waybill",
+          "value": "1Z6419X22090745749",
+          "evidence": {
+            "source_text": "Waybill: 1Z6419X22090745749",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "aeb_reference_quote",
+          "value": "50001502-6980 EXPEDITED",
+          "evidence": {
+            "source_text": "AEB Reference Quote# 50001502-6980 EXPEDITED",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "your_contact",
+          "value": "DRAKE",
+          "evidence": {
+            "source_text": "Votre contact - Your contact: DRAKE",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "gst_no",
+          "value": "R100064716",
+          "evidence": {
+            "source_text": "No. T.P.S. - G.S.T. No. : R100064716",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "qst_no",
+          "value": "M1000098741TQ0001JT",
+          "evidence": {
+            "source_text": "No. T.V.Q. - Q.S.T. No. : M1000098741TQ0001JT",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "packing_slip",
+          "value": "50001506-9905",
+          "evidence": {
+            "source_text": "Bon d'emballage / Packing Slip: 50001506-9905",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "shipping_date",
+          "value": "Jan 06 2022",
+          "evidence": {
+            "source_text": "Date D'expédition / Shipping Date: Jan 06 2022",
+            "page_number": 1
+          }
+        }
+      ]
+    },
+    "financial_validation": {
+      "overall_status": "PASS",
+      "summary": {
+        "total_checks": 4,
+        "passed": 4,
+        "failed": 0,
+        "not_applicable": 0
+      },
+      "checks": [
+        {
+          "check_id": "line_item_1_calculation",
+          "check_name": "Line item 1 calculation",
+          "formula": "quantity × unit_price = amount",
+          "operands": {
+            "description": "BC 27767\nAraldite 2014 HT Epoxy Paste GRAY 50ml 2:1\n6 cartridges/box |\n120 cartridges/case\nBC/REF# BC 27767\nD.O.E on products",
+            "quantity": 24,
+            "unit_price": 23.5,
+            "discount_percent": null,
+            "discount_amount": null
+          },
+          "calculated_value": 564,
+          "reported_value": 564,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "line_item_2_calculation",
+          "check_name": "Line item 2 calculation",
+          "formula": "quantity × unit_price = amount",
+          "operands": {
+            "description": "BC 27767\nAraldite 2014 HT Epoxy Paste GRAY 50ml 2:1\n6 cartridges/box ||\n120 cartridges/case\nBC/REF# BC 27767\nD.O.E on products",
+            "quantity": 24,
+            "unit_price": 23.5,
+            "discount_percent": null,
+            "discount_amount": null
+          },
+          "calculated_value": 564,
+          "reported_value": 564,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "subtotal_reconciliation",
+          "check_name": "Line items to subtotal",
+          "formula": "sum(line_item.amount) = subtotal",
+          "operands": {
+            "line_item_amounts": [
+              564,
+              564
+            ],
+            "discount": null
+          },
+          "calculated_value": 1128,
+          "reported_value": 1128,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Line item amounts reconcile."
+        },
+        {
+          "check_id": "total_reconciliation",
+          "check_name": "Invoice total reconciliation",
+          "formula": "subtotal + tax_amount + shipping_handling - discount + round_off = total",
+          "operands": {
+            "subtotal": 1128,
+            "tax_amount": 146.64,
+            "shipping_handling": null,
+            "discount": null,
+            "amount_before_rounding": null,
+            "round_off": null
+          },
+          "calculated_value": 1274.64,
+          "reported_value": 1274.64,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Invoice total reconciles."
+        }
+      ]
+    },
+    "processing_metadata": {
+      "ocr_used": true,
+      "ocr_fallback_used": false,
+      "processed_at": "2026-09-12T03:40:36.826207+00:00",
+      "processing_time_ms": 10771
+    }
+  }
+  

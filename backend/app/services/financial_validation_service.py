@@ -19,10 +19,71 @@ def to_decimal(value):
     if value is None:
         return None
 
+    if isinstance(value, bool):
+        return None
+
+    if isinstance(value, Decimal):
+        return value
+
+    if isinstance(value, (int, float)):
+        try:
+            return Decimal(str(value))
+        except (InvalidOperation, ValueError, TypeError):
+            return None
+
+    text = str(value).strip()
+
+    if not text:
+        return None
+
+    if text.lower() in {
+        "none",
+        "null",
+        "n/a",
+        "na",
+        "not applicable",
+    }:
+        return None
+
+    if text in {
+        "-",
+        "—",
+        "–",
+    }:
+        return None
+
+    negative_parentheses = (
+        text.startswith("(")
+        and text.endswith(")")
+    )
+
+    if negative_parentheses:
+        text = text[1:-1].strip()
+
+    text = (
+        text.replace(",", "")
+        .replace("₹", "")
+        .replace("$", "")
+        .replace("€", "")
+        .replace("£", "")
+        .replace("−", "-")
+        .replace(" ", "")
+        .strip()
+    )
+
+    if text.endswith("%"):
+        text = text[:-1]
+
+    if not text:
+        return None
+
     try:
-        return Decimal(
-            str(value)
-        )
+        result = Decimal(text)
+
+        if negative_parentheses:
+            result = -abs(result)
+
+        return result
 
     except (
         InvalidOperation,
@@ -83,6 +144,42 @@ def values_match(
             - second
         )
         <= TOLERANCE
+    )
+
+
+def choose_reconciliation_candidate(
+    candidates,
+    reported,
+):
+
+    valid_candidates = [
+        candidate
+        for candidate in candidates
+        if candidate.get("calculated")
+        is not None
+    ]
+
+    if (
+        not valid_candidates
+        or reported is None
+    ):
+        return None
+
+    for candidate in valid_candidates:
+
+        if values_match(
+            candidate["calculated"],
+            reported,
+        ):
+
+            return candidate
+
+    return min(
+        valid_candidates,
+        key=lambda candidate: abs(
+            candidate["calculated"]
+            - reported
+        ),
     )
 
 
@@ -1582,11 +1679,25 @@ def get_section_component_values(
     period,
 ):
 
-    values = []
+    components = []
 
     target = normalize_text(
         section_name
     )
+
+    # Rows shown below a section total are not components of
+    # that total. This matters for statements where items such
+    # as contingent liabilities or bills for collection appear
+    # immediately below Total Assets and may inherit the ASSETS
+    # section label during extraction.
+    non_component_keywords = {
+        "contingent liabilities",
+        "contingent liability",
+        "bills for collection",
+        "bill for collection",
+        "significant accounting policies",
+        "notes to the financial statements",
+    }
 
     for item in line_items:
 
@@ -1599,17 +1710,37 @@ def get_section_component_values(
         if section != target:
             continue
 
-        name = normalize_text(
-            item.get(
-                "name"
-            )
+        raw_name = item.get(
+            "name"
         )
 
+        name = normalize_text(
+            raw_name
+        )
+
+        if not name:
+            continue
+
+        # Stop at the section's reported total. Anything that
+        # follows is outside the component aggregation.
         if (
             name == "total"
             or name.startswith(
                 "total "
             )
+            or name in {
+                f"{target} total",
+                f"total {target}",
+            }
+        ):
+            break
+
+        # Defensive exclusions for common off-balance-sheet
+        # disclosures that can be mis-grouped by OCR/LLM table
+        # extraction. These are labels, never document values.
+        if any(
+            keyword in name
+            for keyword in non_component_keywords
         ):
             continue
 
@@ -1624,11 +1755,14 @@ def get_section_component_values(
         if value is None:
             return None
 
-        values.append(
-            value
+        components.append(
+            {
+                "name": raw_name,
+                "value": value,
+            }
         )
 
-    return values or None
+    return components or None
 
 
 def validate_capital_liabilities_to_assets(
@@ -1930,8 +2064,13 @@ def validate_balance_sheet_section(
 
             continue
 
+        component_values = [
+            item["value"]
+            for item in components
+        ]
+
         calculated = sum(
-            components,
+            component_values,
             Decimal("0"),
         )
 
@@ -1954,12 +2093,30 @@ def validate_balance_sheet_section(
                 ),
                 "period": period,
                 "operands": {
+                    "components": [
+                        {
+                            "name": item[
+                                "name"
+                            ],
+                            "value": (
+                                money_value(
+                                    item[
+                                        "value"
+                                    ]
+                                )
+                            ),
+                        }
+                        for item in components
+                    ],
+                    # Retained for frontend/backward
+                    # compatibility.
                     "component_values": [
                         money_value(
                             value
                         )
-                        for value in components
-                    ]
+                        for value
+                        in component_values
+                    ],
                 },
                 "calculated_value": (
                     money_value(
@@ -2460,46 +2617,55 @@ def validate_pnl_group_profit(
             period,
         )
 
-        calculated = None
+        candidates = []
 
         if (
             before is not None
             and minority is not None
         ):
 
-            calculated = (
+            base = (
                 before
                 - minority
             )
 
+            candidates.append(
+                {
+                    "formula": (
+                        "net_profit_before_minority_interest "
+                        "- minority_interest "
+                        "= net_profit_attributable_to_group"
+                    ),
+                    "calculated": base,
+                }
+            )
+
+            # Some source statements explicitly show
+            # "Share in profits of associates" between
+            # minority interest and group-attributable profit.
             if associates is not None:
 
-                calculated += (
-                    associates
+                candidates.append(
+                    {
+                        "formula": (
+                            "net_profit_before_minority_interest "
+                            "- minority_interest + "
+                            "share_in_profits_of_associates "
+                            "= net_profit_attributable_to_group"
+                        ),
+                        "calculated": (
+                            base
+                            + associates
+                        ),
+                    }
                 )
 
-                formula = (
-                    "net_profit_before_minority_interest "
-                    "- minority_interest + "
-                    "share_in_profits_of_associates "
-                    "= net_profit_attributable_to_group"
-                )
-
-            else:
-
-                formula = (
-                    "net_profit_before_minority_interest "
-                    "- minority_interest "
-                    "= net_profit_attributable_to_group"
-                )
-
-        else:
-
-            formula = (
-                "net_profit_before_minority_interest "
-                "- minority_interest "
-                "= net_profit_attributable_to_group"
+        candidate = (
+            choose_reconciliation_candidate(
+                candidates,
+                reported,
             )
+        )
 
         checks.append(
             build_pnl_check(
@@ -2511,7 +2677,13 @@ def validate_pnl_group_profit(
                     "to Group"
                 ),
                 formula=(
-                    formula
+                    candidate["formula"]
+                    if candidate is not None
+                    else (
+                        "net_profit_before_minority_interest "
+                        "- minority_interest "
+                        "= net_profit_attributable_to_group"
+                    )
                 ),
                 period=(
                     period
@@ -2534,7 +2706,11 @@ def validate_pnl_group_profit(
                     ),
                 },
                 calculated=(
-                    calculated
+                    candidate[
+                        "calculated"
+                    ]
+                    if candidate is not None
+                    else None
                 ),
                 reported=(
                     reported
@@ -2615,117 +2791,88 @@ def validate_pnl_appropriation(
 
             continue
 
-        calculated = None
-        operands = {}
+        candidates = []
 
         if (
             current_profit is not None
             and brought_forward is not None
         ):
 
-            calculated = (
-                current_profit
-                + brought_forward
-            )
-
-            formula = (
-                "current_profit + "
-                "brought_forward_profit = "
-                "total_available_for_appropriation"
-            )
-
-            operands = {
-                "current_profit": (
-                    money_value(
+            candidates.append(
+                {
+                    "formula": (
+                        "current_profit + "
+                        "brought_forward_profit = "
+                        "total_available_for_appropriation"
+                    ),
+                    "calculated": (
                         current_profit
-                    )
-                ),
-                "brought_forward_profit": (
-                    money_value(
-                        brought_forward
-                    )
-                ),
-            }
-
-        elif (
-            group_profit is not None
-            and brought_forward is not None
-        ):
-
-            calculated = (
-                group_profit
-                + brought_forward
+                        + brought_forward
+                    ),
+                }
             )
 
             if impact is not None:
 
-                calculated += (
-                    impact
+                candidates.append(
+                    {
+                        "formula": (
+                            "current_profit + "
+                            "impact_on_amalgamation + "
+                            "brought_forward_profit = "
+                            "total_available_for_appropriation"
+                        ),
+                        "calculated": (
+                            current_profit
+                            + impact
+                            + brought_forward
+                        ),
+                    }
                 )
 
-                formula = (
-                    "net_profit_attributable_to_group "
-                    "+ impact_on_amalgamation + "
-                    "brought_forward_profit = "
-                    "total_available_for_appropriation"
-                )
+        if (
+            group_profit is not None
+            and brought_forward is not None
+        ):
 
-            else:
-
-                formula = (
-                    "net_profit_attributable_to_group "
-                    "+ brought_forward_profit = "
-                    "total_available_for_appropriation"
-                )
-
-            operands = {
-                "net_profit_attributable_to_group": (
-                    money_value(
+            candidates.append(
+                {
+                    "formula": (
+                        "net_profit_attributable_to_group "
+                        "+ brought_forward_profit = "
+                        "total_available_for_appropriation"
+                    ),
+                    "calculated": (
                         group_profit
-                    )
-                ),
-                "impact_on_amalgamation": (
-                    money_value(
-                        impact
-                    )
-                ),
-                "brought_forward_profit": (
-                    money_value(
-                        brought_forward
-                    )
-                ),
-            }
-
-        else:
-
-            formula = (
-                "current_profit + "
-                "brought_forward_profit = "
-                "total_available_for_appropriation"
+                        + brought_forward
+                    ),
+                }
             )
 
-            operands = {
-                "current_profit": (
-                    money_value(
-                        current_profit
-                    )
-                ),
-                "net_profit_attributable_to_group": (
-                    money_value(
-                        group_profit
-                    )
-                ),
-                "impact_on_amalgamation": (
-                    money_value(
-                        impact
-                    )
-                ),
-                "brought_forward_profit": (
-                    money_value(
-                        brought_forward
-                    )
-                ),
-            }
+            if impact is not None:
+
+                candidates.append(
+                    {
+                        "formula": (
+                            "net_profit_attributable_to_group "
+                            "+ impact_on_amalgamation + "
+                            "brought_forward_profit = "
+                            "total_available_for_appropriation"
+                        ),
+                        "calculated": (
+                            group_profit
+                            + impact
+                            + brought_forward
+                        ),
+                    }
+                )
+
+        candidate = (
+            choose_reconciliation_candidate(
+                candidates,
+                reported,
+            )
+        )
 
         checks.append(
             build_pnl_check(
@@ -2737,16 +2884,45 @@ def validate_pnl_appropriation(
                     "for appropriation"
                 ),
                 formula=(
-                    formula
+                    candidate["formula"]
+                    if candidate is not None
+                    else (
+                        "current_profit + "
+                        "brought_forward_profit = "
+                        "total_available_for_appropriation"
+                    )
                 ),
                 period=(
                     period
                 ),
-                operands=(
-                    operands
-                ),
+                operands={
+                    "current_profit": (
+                        money_value(
+                            current_profit
+                        )
+                    ),
+                    "net_profit_attributable_to_group": (
+                        money_value(
+                            group_profit
+                        )
+                    ),
+                    "impact_on_amalgamation": (
+                        money_value(
+                            impact
+                        )
+                    ),
+                    "brought_forward_profit": (
+                        money_value(
+                            brought_forward
+                        )
+                    ),
+                },
                 calculated=(
-                    calculated
+                    candidate[
+                        "calculated"
+                    ]
+                    if candidate is not None
+                    else None
                 ),
                 reported=(
                     reported

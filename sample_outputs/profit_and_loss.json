@@ -1,0 +1,1055 @@
+{
+    "message": "Document processed successfully",
+    "document_name": "Consolidated Profit & Loss 2018.pdf",
+    "document_type": "profit_and_loss",
+    "processing_status": "PASS",
+    "file_validation": {
+      "file_type": "application/pdf",
+      "is_supported": true,
+      "is_readable": true,
+      "page_count": 1,
+      "status": "PASS"
+    },
+    "text_extraction": {
+      "text": "--- PAGE 1 ---\nConsolidated Statement of Profit and Loss\nFor the year ended March 31, 2018\nINCOME\nInterest earned\nOther income\nI| EXPENDITURE\nInterest expended\nOperating expenses\nProvisions and contingencies\nIll PROFIT\nNet profit for the year\nLess: Minority interest\nAdd: Share in profits of associates\nConsolidated profit for the year attributable to the Group\nImpact on amalgamation [Refer Schedule 18(1)]\nBalance in Profit and Loss account brought forward\nIV APPROPRIATIONS\nTransfer to Statutory Reserve\nProposed dividend [Refer Schedule 18(2)]\nTax (including cess) on interim / proposed dividend\nDividend (including tax / cess thereon) pertaining to previous year\npaid during the year, net of dividend tax credits\nTransfer to General Reserve\nTransfer to Capital Reserve\nTransfer to / (from) Investment Reserve Account\nBalance carried over to Balance Sheet\nV EARNINGS PER EQUITY SHARE (Face value ‹ 2 per share)\nBasic\nDiluted\nSignificant accounting policies and notes to the\nConsolidated financial statements\nThe schedules referred to above form an integral part of the\nConsolidated Statement of Profit and Loss\nAs per our report of even date.\nFor and on behalf of the Board\nFor Deloitte Haskins & Sells\nChartered Accountants\nShyamala Gopinath\nChairperson\nP. B. Pardiwalla\nPartner\nMembership No.: 40005\nParesh Sukthankar\nDeputy Managing Director\nMumbai, April 21, 2018\nSanjay Dongre\nExecutive Vice President\n(Legal) & Company Secretary\nHDFC Bank Limited Annual Report 2017-18\n161\nSchedule\n13\n14\nTotal\n15\n16\nTotal\nTotal\nYear ended\n31-Mar-18\n852,878,437\n160,566,041\n1,013,444,478\n423,814,803\n239,272,220\n164,749,045\n827,836,068\n185,608,410\n513,389\n5,221\n185,100,242\n345,323,284\n530,423,526\n45,620,310\n507,653\n33,905,804\n17,486,728\n2,355,227\n(442,018)\n430,989,822\n530,423,526\n71.73\n70.76\n¡ in '000\nYear ended\n31-Mar-17\n732,713,529\n128,776,329\n861,489,858\n380,415,844\n207,510,707\n120,689,285\n708,615,836\n152,874,022\n367,165\n23,393\n152,530,250\n274,507\n248,255,886\n401,060,643\n37,771,634\n255,959\n(16,909)\n14,549,641\n3,134,100\n42,934\n345,323,284\n401,060,643\n59.95\n59.16\nTotal\n17 & 18\nAditya Puri\nManaging Director\nKaizad Bharucha\nExecutive Director\nSashidhar Jagdishan\nChief Financial Officer\nBobby Parikh\nKeki Mistry\nMalay Patel\nPartho Datta\nUmesh Sarangi\nDirectors\nL HDFC BANK\nWe understand your world",
+      "pages": [
+        {
+          "page_number": 1,
+          "text": "Consolidated Statement of Profit and Loss\nFor the year ended March 31, 2018\nINCOME\nInterest earned\nOther income\nI| EXPENDITURE\nInterest expended\nOperating expenses\nProvisions and contingencies\nIll PROFIT\nNet profit for the year\nLess: Minority interest\nAdd: Share in profits of associates\nConsolidated profit for the year attributable to the Group\nImpact on amalgamation [Refer Schedule 18(1)]\nBalance in Profit and Loss account brought forward\nIV APPROPRIATIONS\nTransfer to Statutory Reserve\nProposed dividend [Refer Schedule 18(2)]\nTax (including cess) on interim / proposed dividend\nDividend (including tax / cess thereon) pertaining to previous year\npaid during the year, net of dividend tax credits\nTransfer to General Reserve\nTransfer to Capital Reserve\nTransfer to / (from) Investment Reserve Account\nBalance carried over to Balance Sheet\nV EARNINGS PER EQUITY SHARE (Face value ‹ 2 per share)\nBasic\nDiluted\nSignificant accounting policies and notes to the\nConsolidated financial statements\nThe schedules referred to above form an integral part of the\nConsolidated Statement of Profit and Loss\nAs per our report of even date.\nFor and on behalf of the Board\nFor Deloitte Haskins & Sells\nChartered Accountants\nShyamala Gopinath\nChairperson\nP. B. Pardiwalla\nPartner\nMembership No.: 40005\nParesh Sukthankar\nDeputy Managing Director\nMumbai, April 21, 2018\nSanjay Dongre\nExecutive Vice President\n(Legal) & Company Secretary\nHDFC Bank Limited Annual Report 2017-18\n161\nSchedule\n13\n14\nTotal\n15\n16\nTotal\nTotal\nYear ended\n31-Mar-18\n852,878,437\n160,566,041\n1,013,444,478\n423,814,803\n239,272,220\n164,749,045\n827,836,068\n185,608,410\n513,389\n5,221\n185,100,242\n345,323,284\n530,423,526\n45,620,310\n507,653\n33,905,804\n17,486,728\n2,355,227\n(442,018)\n430,989,822\n530,423,526\n71.73\n70.76\n¡ in '000\nYear ended\n31-Mar-17\n732,713,529\n128,776,329\n861,489,858\n380,415,844\n207,510,707\n120,689,285\n708,615,836\n152,874,022\n367,165\n23,393\n152,530,250\n274,507\n248,255,886\n401,060,643\n37,771,634\n255,959\n(16,909)\n14,549,641\n3,134,100\n42,934\n345,323,284\n401,060,643\n59.95\n59.16\nTotal\n17 & 18\nAditya Puri\nManaging Director\nKaizad Bharucha\nExecutive Director\nSashidhar Jagdishan\nChief Financial Officer\nBobby Parikh\nKeki Mistry\nMalay Patel\nPartho Datta\nUmesh Sarangi\nDirectors\nL HDFC BANK\nWe understand your world",
+          "extraction_method": "ocr",
+          "ocr_provider": "ocr_space"
+        }
+      ],
+      "ocr_used": true,
+      "ocr_fallback_used": false
+    },
+    "extracted_data": {
+      "company_name": {
+        "value": "HDFC Bank Limited",
+        "evidence": {
+          "source_text": "HDFC Bank Limited Annual Report 2017-18",
+          "page_number": 1
+        }
+      },
+      "statement_title": {
+        "value": "Consolidated Statement of Profit and Loss",
+        "evidence": {
+          "source_text": "Consolidated Statement of Profit and Loss",
+          "page_number": 1
+        }
+      },
+      "statement_date": {
+        "value": "Year ended March 31, 2018",
+        "evidence": {
+          "source_text": "For the year ended March 31, 2018",
+          "page_number": 1
+        }
+      },
+      "currency": {
+        "value": "₹ in '000",
+        "evidence": {
+          "source_text": "¡ in '000",
+          "page_number": 1
+        }
+      },
+      "periods": [
+        "Year ended 31-Mar-18",
+        "Year ended 31-Mar-17"
+      ],
+      "revenue": [],
+      "cost_of_sales": [],
+      "gross_profit": [],
+      "operating_expenses": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 239272220,
+          "evidence": {
+            "source_text": "239,272,220",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 207510707,
+          "evidence": {
+            "source_text": "207,510,707",
+            "page_number": 1
+          }
+        }
+      ],
+      "operating_profit": [],
+      "tax_expense": [],
+      "net_profit": [],
+      "interest_earned": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 852878437,
+          "evidence": {
+            "source_text": "852,878,437",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 732713529,
+          "evidence": {
+            "source_text": "732,713,529",
+            "page_number": 1
+          }
+        }
+      ],
+      "other_income": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 160566041,
+          "evidence": {
+            "source_text": "160,566,041",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 128776329,
+          "evidence": {
+            "source_text": "128,776,329",
+            "page_number": 1
+          }
+        }
+      ],
+      "total_income": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 1013444478,
+          "evidence": {
+            "source_text": "1,013,444,478",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 861489858,
+          "evidence": {
+            "source_text": "861,489,858",
+            "page_number": 1
+          }
+        }
+      ],
+      "interest_expended": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 423814803,
+          "evidence": {
+            "source_text": "423,814,803",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 380415844,
+          "evidence": {
+            "source_text": "380,415,844",
+            "page_number": 1
+          }
+        }
+      ],
+      "provisions_and_contingencies": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 164749045,
+          "evidence": {
+            "source_text": "164,749,045",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 120689285,
+          "evidence": {
+            "source_text": "120,689,285",
+            "page_number": 1
+          }
+        }
+      ],
+      "total_expenditure": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 827836068,
+          "evidence": {
+            "source_text": "827,836,068",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 708615836,
+          "evidence": {
+            "source_text": "708,615,836",
+            "page_number": 1
+          }
+        }
+      ],
+      "net_profit_before_minority_interest": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 185608410,
+          "evidence": {
+            "source_text": "185,608,410",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 152874022,
+          "evidence": {
+            "source_text": "152,874,022",
+            "page_number": 1
+          }
+        }
+      ],
+      "minority_interest": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 513389,
+          "evidence": {
+            "source_text": "513,389",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 367165,
+          "evidence": {
+            "source_text": "367,165",
+            "page_number": 1
+          }
+        }
+      ],
+      "share_in_profits_of_associates": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 5221,
+          "evidence": {
+            "source_text": "5,221",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 23393,
+          "evidence": {
+            "source_text": "23,393",
+            "page_number": 1
+          }
+        }
+      ],
+      "net_profit_attributable_to_group": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 185100242,
+          "evidence": {
+            "source_text": "185,100,242",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 152530250,
+          "evidence": {
+            "source_text": "152,530,250",
+            "page_number": 1
+          }
+        }
+      ],
+      "current_profit": [],
+      "impact_on_amalgamation": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": null,
+          "evidence": {
+            "source_text": null,
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 274507,
+          "evidence": {
+            "source_text": "274,507",
+            "page_number": 1
+          }
+        }
+      ],
+      "brought_forward_profit": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 345323284,
+          "evidence": {
+            "source_text": "345,323,284",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 248255886,
+          "evidence": {
+            "source_text": "248,255,886",
+            "page_number": 1
+          }
+        }
+      ],
+      "total_available_for_appropriation": [
+        {
+          "period": "Year ended 31-Mar-18",
+          "value": 530423526,
+          "evidence": {
+            "source_text": "530,423,526",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "Year ended 31-Mar-17",
+          "value": 401060643,
+          "evidence": {
+            "source_text": "401,060,643",
+            "page_number": 1
+          }
+        }
+      ],
+      "line_items": [
+        {
+          "section": "INCOME",
+          "name": "Interest earned",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 852878437,
+              "evidence": {
+                "source_text": "852,878,437",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 732713529,
+              "evidence": {
+                "source_text": "732,713,529",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "INCOME",
+          "name": "Other income",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 160566041,
+              "evidence": {
+                "source_text": "160,566,041",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 128776329,
+              "evidence": {
+                "source_text": "128,776,329",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "INCOME",
+          "name": "Total Income",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 1013444478,
+              "evidence": {
+                "source_text": "1,013,444,478",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 861489858,
+              "evidence": {
+                "source_text": "861,489,858",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "EXPENDITURE",
+          "name": "Interest expended",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 423814803,
+              "evidence": {
+                "source_text": "423,814,803",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 380415844,
+              "evidence": {
+                "source_text": "380,415,844",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "EXPENDITURE",
+          "name": "Operating expenses",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 239272220,
+              "evidence": {
+                "source_text": "239,272,220",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 207510707,
+              "evidence": {
+                "source_text": "207,510,707",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "EXPENDITURE",
+          "name": "Provisions and contingencies",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 164749045,
+              "evidence": {
+                "source_text": "164,749,045",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 120689285,
+              "evidence": {
+                "source_text": "120,689,285",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "EXPENDITURE",
+          "name": "Total",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 827836068,
+              "evidence": {
+                "source_text": "827,836,068",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 708615836,
+              "evidence": {
+                "source_text": "708,615,836",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "PROFIT",
+          "name": "Net profit for the year",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 185608410,
+              "evidence": {
+                "source_text": "185,608,410",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 152874022,
+              "evidence": {
+                "source_text": "152,874,022",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "PROFIT",
+          "name": "Less: Minority interest",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 513389,
+              "evidence": {
+                "source_text": "513,389",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 367165,
+              "evidence": {
+                "source_text": "367,165",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "PROFIT",
+          "name": "Add: Share in profits of associates",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 5221,
+              "evidence": {
+                "source_text": "5,221",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 23393,
+              "evidence": {
+                "source_text": "23,393",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "PROFIT",
+          "name": "Consolidated profit for the year attributable to the Group",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 185100242,
+              "evidence": {
+                "source_text": "185,100,242",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 152530250,
+              "evidence": {
+                "source_text": "152,530,250",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "PROFIT",
+          "name": "Impact on amalgamation [Refer Schedule 18(1)]",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": null,
+              "evidence": {
+                "source_text": null,
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 274507,
+              "evidence": {
+                "source_text": "274,507",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "PROFIT",
+          "name": "Balance in Profit and Loss account brought forward",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 345323284,
+              "evidence": {
+                "source_text": "345,323,284",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 248255886,
+              "evidence": {
+                "source_text": "248,255,886",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "PROFIT",
+          "name": "Total",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 530423526,
+              "evidence": {
+                "source_text": "530,423,526",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 401060643,
+              "evidence": {
+                "source_text": "401,060,643",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "APPROPRIATIONS",
+          "name": "Transfer to Statutory Reserve",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 45620310,
+              "evidence": {
+                "source_text": "45,620,310",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 37771634,
+              "evidence": {
+                "source_text": "37,771,634",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "APPROPRIATIONS",
+          "name": "Proposed dividend [Refer Schedule 18(2)]",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 507653,
+              "evidence": {
+                "source_text": "507,653",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 255959,
+              "evidence": {
+                "source_text": "255,959",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "APPROPRIATIONS",
+          "name": "Tax (including cess) on interim / proposed dividend",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 33905804,
+              "evidence": {
+                "source_text": "33,905,804",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": null,
+              "evidence": {
+                "source_text": null,
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "APPROPRIATIONS",
+          "name": "Dividend (including tax / cess thereon) pertaining to previous year paid during the year, net of dividend tax credits",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 17486728,
+              "evidence": {
+                "source_text": "17,486,728",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": null,
+              "evidence": {
+                "source_text": null,
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "APPROPRIATIONS",
+          "name": "Transfer to General Reserve",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 2355227,
+              "evidence": {
+                "source_text": "2,355,227",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 14549641,
+              "evidence": {
+                "source_text": "14,549,641",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "APPROPRIATIONS",
+          "name": "Transfer to Capital Reserve",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": -442018,
+              "evidence": {
+                "source_text": "(442,018)",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 3134100,
+              "evidence": {
+                "source_text": "3,134,100",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "APPROPRIATIONS",
+          "name": "Transfer to / (from) Investment Reserve Account",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": null,
+              "evidence": {
+                "source_text": null,
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 42934,
+              "evidence": {
+                "source_text": "42,934",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "APPROPRIATIONS",
+          "name": "Balance carried over to Balance Sheet",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 430989822,
+              "evidence": {
+                "source_text": "430,989,822",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 345323284,
+              "evidence": {
+                "source_text": "345,323,284",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "APPROPRIATIONS",
+          "name": "Total",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 530423526,
+              "evidence": {
+                "source_text": "530,423,526",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 401060643,
+              "evidence": {
+                "source_text": "401,060,643",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "EARNINGS PER EQUITY SHARE",
+          "name": "Basic",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 71.73,
+              "evidence": {
+                "source_text": "71.73",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 59.95,
+              "evidence": {
+                "source_text": "59.95",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "EARNINGS PER EQUITY SHARE",
+          "name": "Diluted",
+          "amounts": [
+            {
+              "period": "Year ended 31-Mar-18",
+              "value": 70.76,
+              "evidence": {
+                "source_text": "70.76",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "Year ended 31-Mar-17",
+              "value": 59.16,
+              "evidence": {
+                "source_text": "59.16",
+                "page_number": 1
+              }
+            }
+          ]
+        }
+      ],
+      "additional_fields": [
+        {
+          "name": "Earnings per share face value",
+          "value": "2 per share",
+          "evidence": {
+            "source_text": "Face value ‹ 2 per share",
+            "page_number": 1
+          }
+        }
+      ]
+    },
+    "financial_validation": {
+      "overall_status": "PASS",
+      "summary": {
+        "total_checks": 10,
+        "passed": 10,
+        "failed": 0,
+        "not_applicable": 0
+      },
+      "checks": [
+        {
+          "check_id": "pnl_total_income_Year ended 31-Mar-18",
+          "check_name": "Total Income",
+          "formula": "interest_earned + other_income = total_income",
+          "period": "Year ended 31-Mar-18",
+          "operands": {
+            "interest_earned": 852878437,
+            "other_income": 160566041
+          },
+          "calculated_value": 1013444478,
+          "reported_value": 1013444478,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "pnl_total_income_Year ended 31-Mar-17",
+          "check_name": "Total Income",
+          "formula": "interest_earned + other_income = total_income",
+          "period": "Year ended 31-Mar-17",
+          "operands": {
+            "interest_earned": 732713529,
+            "other_income": 128776329
+          },
+          "calculated_value": 861489858,
+          "reported_value": 861489858,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "pnl_total_expenditure_Year ended 31-Mar-18",
+          "check_name": "Total Expenditure",
+          "formula": "interest_expended + operating_expenses + provisions_and_contingencies = total_expenditure",
+          "period": "Year ended 31-Mar-18",
+          "operands": {
+            "interest_expended": 423814803,
+            "operating_expenses": 239272220,
+            "provisions_and_contingencies": 164749045
+          },
+          "calculated_value": 827836068,
+          "reported_value": 827836068,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "pnl_total_expenditure_Year ended 31-Mar-17",
+          "check_name": "Total Expenditure",
+          "formula": "interest_expended + operating_expenses + provisions_and_contingencies = total_expenditure",
+          "period": "Year ended 31-Mar-17",
+          "operands": {
+            "interest_expended": 380415844,
+            "operating_expenses": 207510707,
+            "provisions_and_contingencies": 120689285
+          },
+          "calculated_value": 708615836,
+          "reported_value": 708615836,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "pnl_profit_before_minority_Year ended 31-Mar-18",
+          "check_name": "Net Profit before Minority Interest",
+          "formula": "total_income - total_expenditure = net_profit_before_minority_interest",
+          "period": "Year ended 31-Mar-18",
+          "operands": {
+            "total_income": 1013444478,
+            "total_expenditure": 827836068
+          },
+          "calculated_value": 185608410,
+          "reported_value": 185608410,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "pnl_profit_before_minority_Year ended 31-Mar-17",
+          "check_name": "Net Profit before Minority Interest",
+          "formula": "total_income - total_expenditure = net_profit_before_minority_interest",
+          "period": "Year ended 31-Mar-17",
+          "operands": {
+            "total_income": 861489858,
+            "total_expenditure": 708615836
+          },
+          "calculated_value": 152874022,
+          "reported_value": 152874022,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "pnl_group_profit_Year ended 31-Mar-18",
+          "check_name": "Net Profit attributable to Group",
+          "formula": "net_profit_before_minority_interest - minority_interest + share_in_profits_of_associates = net_profit_attributable_to_group",
+          "period": "Year ended 31-Mar-18",
+          "operands": {
+            "net_profit_before_minority_interest": 185608410,
+            "minority_interest": 513389,
+            "share_in_profits_of_associates": 5221
+          },
+          "calculated_value": 185100242,
+          "reported_value": 185100242,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "pnl_group_profit_Year ended 31-Mar-17",
+          "check_name": "Net Profit attributable to Group",
+          "formula": "net_profit_before_minority_interest - minority_interest + share_in_profits_of_associates = net_profit_attributable_to_group",
+          "period": "Year ended 31-Mar-17",
+          "operands": {
+            "net_profit_before_minority_interest": 152874022,
+            "minority_interest": 367165,
+            "share_in_profits_of_associates": 23393
+          },
+          "calculated_value": 152530250,
+          "reported_value": 152530250,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "pnl_appropriation_Year ended 31-Mar-18",
+          "check_name": "Profit available for appropriation",
+          "formula": "net_profit_attributable_to_group + brought_forward_profit = total_available_for_appropriation",
+          "period": "Year ended 31-Mar-18",
+          "operands": {
+            "net_profit_attributable_to_group": 185100242,
+            "impact_on_amalgamation": null,
+            "brought_forward_profit": 345323284
+          },
+          "calculated_value": 530423526,
+          "reported_value": 530423526,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        },
+        {
+          "check_id": "pnl_appropriation_Year ended 31-Mar-17",
+          "check_name": "Profit available for appropriation",
+          "formula": "net_profit_attributable_to_group + impact_on_amalgamation + brought_forward_profit = total_available_for_appropriation",
+          "period": "Year ended 31-Mar-17",
+          "operands": {
+            "net_profit_attributable_to_group": 152530250,
+            "impact_on_amalgamation": 274507,
+            "brought_forward_profit": 248255886
+          },
+          "calculated_value": 401060643,
+          "reported_value": 401060643,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Financial values reconcile."
+        }
+      ]
+    },
+    "processing_metadata": {
+      "ocr_used": true,
+      "ocr_fallback_used": false,
+      "processed_at": "2026-09-12T03:43:49.846621+00:00",
+      "processing_time_ms": 19701
+    }
+  }
+  

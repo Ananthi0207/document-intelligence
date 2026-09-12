@@ -1,0 +1,556 @@
+{
+    "message": "Document processed successfully",
+    "document_name": "Consolidated Balance Sheet 2017.pdf",
+    "document_type": "balance_sheet",
+    "processing_status": "PASS",
+    "file_validation": {
+      "file_type": "application/pdf",
+      "is_supported": true,
+      "is_readable": true,
+      "page_count": 1,
+      "status": "PASS"
+    },
+    "text_extraction": {
+      "text": "--- PAGE 1 ---\nConsolidated Balance Sheet\nAs at March 31, 2017\n\n* in '000\nAs at\nAs at\nSchedule\n31-Mar-17\n31-Mar-16\n\nCAPITAL AND LIABILITIES\nCapital\n1\n5,125,091\n5,056,373\nReserves and surplus\n2\n912,814,397\n737,984,869\nMinority interest\n2A\n2,914,389\n1,806,228\nDeposits\n3\n6,431,342,479\n5,458,732,889\nBorrowings\n4\n984,156,439\n1,037,139,597\nOther liabilities and provisions\n5\n587,088,812\n381,403,308\nTotal\n8,923,441,607\n7,622,123,264\n\nASSETS\nCash and balances with Reserve Bank of India\n6\n379,105,485\n300,765,846\nBalances with banks and money at call and short notice\n7\n114,005,711\n89,922,969\nInvestments\n8\n2,107,771,120\n1,936,338,475\nAdvances\n9\n5,854,809,871\n4,872,904,174\nFixed assets\n10\n38,146,997\n34,796,976\nOther assets\n11\n429,602,423\n387,394,824\nTotal\n8,923,441,607\n7,622,123,264\n\nContingent liabilities\n12\n8,182,842,892\n8,535,273,826\nBills for collection\n308,480,352\n234,899,997\n\nSignificant accounting policies and notes to the Consolidated financial\nstatements\n17 & 18\nThe schedules referred to above form an integral part of the\nConsolidated Balance Sheet\n\nAs per our report of even date.\nFor Deloitte Haskins & Sells\nChartered Accountants\n\nFor and on behalf of the Board\n\nShyamala Gopinath\nChairperson\n\nAditya Puri\nManaging Director\n\nAnami Roy\nBobby Parikh\nKeki Mistry\nMalay Patel\nPartho Datta\nRenu Karnad\nSrikanth Nadhamuni\nUmesh Sarangi\nDirectors\n\nP. B. Pardiwalla\nPartner\nMembership No.: 40005\n\nParesh Sukthankar\nDeputy Managing Director\n\nKaizad Bharucha\nExecutive Director\n\nSanjay Dongre\nExecutive Vice President\n(Legal) & Company Secretary\n\nSashidhar Jagdishan\nChief Financial Officer\n\nMumbai, April 21, 2017\n\nHDFC BANK\nWe understand your world\n\nHDFC Bank Limited Annual Report 2016-17\n148",
+      "pages": [
+        {
+          "page_number": 1,
+          "text": "Consolidated Balance Sheet\nAs at March 31, 2017\n\n* in '000\nAs at\nAs at\nSchedule\n31-Mar-17\n31-Mar-16\n\nCAPITAL AND LIABILITIES\nCapital\n1\n5,125,091\n5,056,373\nReserves and surplus\n2\n912,814,397\n737,984,869\nMinority interest\n2A\n2,914,389\n1,806,228\nDeposits\n3\n6,431,342,479\n5,458,732,889\nBorrowings\n4\n984,156,439\n1,037,139,597\nOther liabilities and provisions\n5\n587,088,812\n381,403,308\nTotal\n8,923,441,607\n7,622,123,264\n\nASSETS\nCash and balances with Reserve Bank of India\n6\n379,105,485\n300,765,846\nBalances with banks and money at call and short notice\n7\n114,005,711\n89,922,969\nInvestments\n8\n2,107,771,120\n1,936,338,475\nAdvances\n9\n5,854,809,871\n4,872,904,174\nFixed assets\n10\n38,146,997\n34,796,976\nOther assets\n11\n429,602,423\n387,394,824\nTotal\n8,923,441,607\n7,622,123,264\n\nContingent liabilities\n12\n8,182,842,892\n8,535,273,826\nBills for collection\n308,480,352\n234,899,997\n\nSignificant accounting policies and notes to the Consolidated financial\nstatements\n17 & 18\nThe schedules referred to above form an integral part of the\nConsolidated Balance Sheet\n\nAs per our report of even date.\nFor Deloitte Haskins & Sells\nChartered Accountants\n\nFor and on behalf of the Board\n\nShyamala Gopinath\nChairperson\n\nAditya Puri\nManaging Director\n\nAnami Roy\nBobby Parikh\nKeki Mistry\nMalay Patel\nPartho Datta\nRenu Karnad\nSrikanth Nadhamuni\nUmesh Sarangi\nDirectors\n\nP. B. Pardiwalla\nPartner\nMembership No.: 40005\n\nParesh Sukthankar\nDeputy Managing Director\n\nKaizad Bharucha\nExecutive Director\n\nSanjay Dongre\nExecutive Vice President\n(Legal) & Company Secretary\n\nSashidhar Jagdishan\nChief Financial Officer\n\nMumbai, April 21, 2017\n\nHDFC BANK\nWe understand your world\n\nHDFC Bank Limited Annual Report 2016-17\n148",
+          "extraction_method": "ocr",
+          "ocr_provider": "gemini_vision"
+        }
+      ],
+      "ocr_used": true,
+      "ocr_fallback_used": true
+    },
+    "extracted_data": {
+      "company_name": {
+        "value": "HDFC BANK",
+        "evidence": {
+          "source_text": "HDFC BANK",
+          "page_number": 1
+        }
+      },
+      "statement_title": {
+        "value": "Consolidated Balance Sheet",
+        "evidence": {
+          "source_text": "Consolidated Balance Sheet",
+          "page_number": 1
+        }
+      },
+      "statement_date": {
+        "value": "As at March 31, 2017",
+        "evidence": {
+          "source_text": "As at March 31, 2017",
+          "page_number": 1
+        }
+      },
+      "currency": {
+        "value": "* in '000",
+        "evidence": {
+          "source_text": "* in '000",
+          "page_number": 1
+        }
+      },
+      "periods": [
+        "31-Mar-17",
+        "31-Mar-16"
+      ],
+      "total_capital_and_liabilities": [
+        {
+          "period": "31-Mar-17",
+          "value": 8923441607,
+          "evidence": {
+            "source_text": "Total 8,923,441,607",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "31-Mar-16",
+          "value": 7622123264,
+          "evidence": {
+            "source_text": "Total 7,622,123,264",
+            "page_number": 1
+          }
+        }
+      ],
+      "total_assets": [
+        {
+          "period": "31-Mar-17",
+          "value": 8923441607,
+          "evidence": {
+            "source_text": "Total 8,923,441,607",
+            "page_number": 1
+          }
+        },
+        {
+          "period": "31-Mar-16",
+          "value": 7622123264,
+          "evidence": {
+            "source_text": "Total 7,622,123,264",
+            "page_number": 1
+          }
+        }
+      ],
+      "total_liabilities": [],
+      "total_equity": [],
+      "line_items": [
+        {
+          "section": "CAPITAL AND LIABILITIES",
+          "name": "Capital",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 5125091,
+              "evidence": {
+                "source_text": "5,125,091",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 5056373,
+              "evidence": {
+                "source_text": "5,056,373",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "CAPITAL AND LIABILITIES",
+          "name": "Reserves and surplus",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 912814397,
+              "evidence": {
+                "source_text": "912,814,397",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 737984869,
+              "evidence": {
+                "source_text": "737,984,869",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "CAPITAL AND LIABILITIES",
+          "name": "Minority interest",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 2914389,
+              "evidence": {
+                "source_text": "2,914,389",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 1806228,
+              "evidence": {
+                "source_text": "1,806,228",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "CAPITAL AND LIABILITIES",
+          "name": "Deposits",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 6431342479,
+              "evidence": {
+                "source_text": "6,431,342,479",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 5458732889,
+              "evidence": {
+                "source_text": "5,458,732,889",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "CAPITAL AND LIABILITIES",
+          "name": "Borrowings",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 984156439,
+              "evidence": {
+                "source_text": "984,156,439",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 1037139597,
+              "evidence": {
+                "source_text": "1,037,139,597",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "CAPITAL AND LIABILITIES",
+          "name": "Other liabilities and provisions",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 587088812,
+              "evidence": {
+                "source_text": "587,088,812",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 381403308,
+              "evidence": {
+                "source_text": "381,403,308",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "ASSETS",
+          "name": "Cash and balances with Reserve Bank of India",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 379105485,
+              "evidence": {
+                "source_text": "379,105,485",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 300765846,
+              "evidence": {
+                "source_text": "300,765,846",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "ASSETS",
+          "name": "Balances with banks and money at call and short notice",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 114005711,
+              "evidence": {
+                "source_text": "114,005,711",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 89922969,
+              "evidence": {
+                "source_text": "89,922,969",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "ASSETS",
+          "name": "Investments",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 2107771120,
+              "evidence": {
+                "source_text": "2,107,771,120",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 1936338475,
+              "evidence": {
+                "source_text": "1,936,338,475",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "ASSETS",
+          "name": "Advances",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 5854809871,
+              "evidence": {
+                "source_text": "5,854,809,871",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 4872904174,
+              "evidence": {
+                "source_text": "4,872,904,174",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "ASSETS",
+          "name": "Fixed assets",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 38146997,
+              "evidence": {
+                "source_text": "38,146,997",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 34796976,
+              "evidence": {
+                "source_text": "34,796,976",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": "ASSETS",
+          "name": "Other assets",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 429602423,
+              "evidence": {
+                "source_text": "429,602,423",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 387394824,
+              "evidence": {
+                "source_text": "387,394,824",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": null,
+          "name": "Contingent liabilities",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 8182842892,
+              "evidence": {
+                "source_text": "8,182,842,892",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 8535273826,
+              "evidence": {
+                "source_text": "8,535,273,826",
+                "page_number": 1
+              }
+            }
+          ]
+        },
+        {
+          "section": null,
+          "name": "Bills for collection",
+          "amounts": [
+            {
+              "period": "31-Mar-17",
+              "value": 308480352,
+              "evidence": {
+                "source_text": "308,480,352",
+                "page_number": 1
+              }
+            },
+            {
+              "period": "31-Mar-16",
+              "value": 234899997,
+              "evidence": {
+                "source_text": "234,899,997",
+                "page_number": 1
+              }
+            }
+          ]
+        }
+      ],
+      "additional_fields": [
+        {
+          "name": "Report Date",
+          "value": "April 21, 2017",
+          "evidence": {
+            "source_text": "Mumbai, April 21, 2017",
+            "page_number": 1
+          }
+        },
+        {
+          "name": "Document Identifier",
+          "value": "HDFC Bank Limited Annual Report 2016-17",
+          "evidence": {
+            "source_text": "HDFC Bank Limited Annual Report 2016-17",
+            "page_number": 1
+          }
+        }
+      ]
+    },
+    "financial_validation": {
+      "overall_status": "PASS",
+      "summary": {
+        "total_checks": 6,
+        "passed": 6,
+        "failed": 0,
+        "not_applicable": 0
+      },
+      "checks": [
+        {
+          "check_id": "capital_liabilities_vs_assets_31-Mar-17",
+          "check_name": "Capital & Liabilities to Assets",
+          "formula": "total_capital_and_liabilities = total_assets",
+          "period": "31-Mar-17",
+          "operands": {
+            "total_capital_and_liabilities": 8923441607
+          },
+          "calculated_value": 8923441607,
+          "reported_value": 8923441607,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Balance sheet totals reconcile."
+        },
+        {
+          "check_id": "capital_liabilities_vs_assets_31-Mar-16",
+          "check_name": "Capital & Liabilities to Assets",
+          "formula": "total_capital_and_liabilities = total_assets",
+          "period": "31-Mar-16",
+          "operands": {
+            "total_capital_and_liabilities": 7622123264
+          },
+          "calculated_value": 7622123264,
+          "reported_value": 7622123264,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Balance sheet totals reconcile."
+        },
+        {
+          "check_id": "capital_liability_components_31-Mar-17",
+          "check_name": "Capital & Liability components",
+          "formula": "sum(CAPITAL AND LIABILITIES components) = total_capital_and_liabilities",
+          "period": "31-Mar-17",
+          "operands": {
+            "component_values": [
+              5125091,
+              912814397,
+              2914389,
+              6431342479,
+              984156439,
+              587088812
+            ]
+          },
+          "calculated_value": 8923441607,
+          "reported_value": 8923441607,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Components reconcile to reported total."
+        },
+        {
+          "check_id": "capital_liability_components_31-Mar-16",
+          "check_name": "Capital & Liability components",
+          "formula": "sum(CAPITAL AND LIABILITIES components) = total_capital_and_liabilities",
+          "period": "31-Mar-16",
+          "operands": {
+            "component_values": [
+              5056373,
+              737984869,
+              1806228,
+              5458732889,
+              1037139597,
+              381403308
+            ]
+          },
+          "calculated_value": 7622123264,
+          "reported_value": 7622123264,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Components reconcile to reported total."
+        },
+        {
+          "check_id": "asset_components_31-Mar-17",
+          "check_name": "Asset components",
+          "formula": "sum(ASSETS components) = total_assets",
+          "period": "31-Mar-17",
+          "operands": {
+            "component_values": [
+              379105485,
+              114005711,
+              2107771120,
+              5854809871,
+              38146997,
+              429602423
+            ]
+          },
+          "calculated_value": 8923441607,
+          "reported_value": 8923441607,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Components reconcile to reported total."
+        },
+        {
+          "check_id": "asset_components_31-Mar-16",
+          "check_name": "Asset components",
+          "formula": "sum(ASSETS components) = total_assets",
+          "period": "31-Mar-16",
+          "operands": {
+            "component_values": [
+              300765846,
+              89922969,
+              1936338475,
+              4872904174,
+              34796976,
+              387394824
+            ]
+          },
+          "calculated_value": 7622123264,
+          "reported_value": 7622123264,
+          "variance": 0,
+          "status": "PASS",
+          "message": "Components reconcile to reported total."
+        }
+      ]
+    },
+    "processing_metadata": {
+      "ocr_used": true,
+      "ocr_fallback_used": true,
+      "processed_at": "2026-09-12T03:38:31.581733+00:00",
+      "processing_time_ms": 17710
+    }
+  }
+  

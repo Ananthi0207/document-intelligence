@@ -481,6 +481,666 @@ def normalize_invoice_data(
     return data
 
 
+
+# ==========================================================
+# BALANCE SHEET NORMALIZATION
+# ==========================================================
+
+
+def _numeric_key(
+    value,
+):
+    """
+    Stable comparison key for source-backed numeric values.
+    """
+
+    parsed = parse_visible_numeric_value(
+        value
+    )
+
+    if parsed is None:
+        return None
+
+    return round(
+        float(parsed),
+        6,
+    )
+
+
+def _extract_matching_number_tokens(
+    text: str,
+    allowed_values: set[float],
+):
+    """
+    Return numeric tokens from source text whose values are
+    already present in the extracted Balance Sheet data.
+
+    This is used only to restore row/period alignment when OCR
+    flattens a multi-column financial table. No values are
+    calculated or invented.
+    """
+
+    tokens = []
+
+    pattern = re.compile(
+        r"\(?-?\d[\d,]*(?:\.\d+)?\)?"
+    )
+
+    for match in pattern.finditer(
+        text
+    ):
+
+        raw = match.group(
+            0
+        )
+
+        key = _numeric_key(
+            raw
+        )
+
+        if (
+            key is not None
+            and key in allowed_values
+        ):
+
+            parsed_value = (
+                parse_visible_numeric_value(
+                    raw
+                )
+            )
+
+            if (
+                isinstance(
+                    parsed_value,
+                    float,
+                )
+                and parsed_value.is_integer()
+            ):
+                parsed_value = int(
+                    parsed_value
+                )
+
+            tokens.append(
+                {
+                    "raw": raw,
+                    "value": parsed_value,
+                }
+            )
+
+    return tokens
+
+
+def _set_period_amount_from_source(
+    item: dict,
+    period: str,
+    token: dict,
+):
+    """
+    Replace only an already-existing period amount using an
+    explicit numeric token found in the source document.
+    """
+
+    for amount in (
+        item.get(
+            "amounts",
+            [],
+        )
+        or []
+    ):
+
+        if (
+            amount.get(
+                "period"
+            )
+            != period
+        ):
+            continue
+
+        amount[
+            "value"
+        ] = token[
+            "value"
+        ]
+
+        evidence = (
+            amount.get(
+                "evidence"
+            )
+            or {}
+        )
+
+        evidence[
+            "source_text"
+        ] = token[
+            "raw"
+        ]
+
+        amount[
+            "evidence"
+        ] = evidence
+
+        return
+
+
+def normalize_balance_sheet_data(
+    data: dict,
+    document_text: str,
+):
+    """
+    Normalize Balance Sheet table alignment without inventing
+    values.
+
+    OCR frequently flattens comparative Balance Sheet columns.
+    A common layout is:
+
+        asset rows
+        Total
+        off-balance-sheet rows
+
+    followed by the same values for the comparative period.
+
+    If Gemini shifts a comparative-period value by one row, this
+    function rebuilds the mapping from the original OCR number
+    sequence, using the explicitly extracted Total Assets values
+    only as source anchors.
+
+    No arithmetic is used to force a balance.
+    """
+
+    line_items = (
+        data.get(
+            "line_items",
+            [],
+        )
+        or []
+    )
+
+    periods = (
+        data.get(
+            "periods",
+            [],
+        )
+        or []
+    )
+
+    total_assets = (
+        data.get(
+            "total_assets",
+            [],
+        )
+        or []
+    )
+
+    if (
+        len(periods) < 2
+        or not line_items
+        or len(total_assets) < 2
+    ):
+        return data
+
+    off_balance_aliases = {
+        "contingent liabilities",
+        "bills for collection",
+    }
+
+    total_aliases = {
+        "total",
+        "total assets",
+        "assets total",
+    }
+
+    asset_items = []
+
+    for item in line_items:
+
+        section = normalize_label(
+            item.get(
+                "section"
+            )
+        )
+
+        name = normalize_label(
+            item.get(
+                "name"
+            )
+        )
+
+        if (
+            section == "assets"
+            or name
+            in off_balance_aliases
+        ):
+            asset_items.append(
+                item
+            )
+
+    if not asset_items:
+        return data
+
+    component_items = []
+
+    off_balance_items = []
+
+    for item in asset_items:
+
+        name = normalize_label(
+            item.get(
+                "name"
+            )
+        )
+
+        if (
+            name
+            in off_balance_aliases
+        ):
+
+            # These remain extracted and visible, but they are
+            # not Asset components for Balance Sheet validation.
+            item[
+                "section"
+            ] = "OFF BALANCE SHEET"
+
+            off_balance_items.append(
+                item
+            )
+
+        elif (
+            name
+            not in total_aliases
+        ):
+
+            component_items.append(
+                item
+            )
+
+    component_count = len(
+        component_items
+    )
+
+    off_balance_count = len(
+        off_balance_items
+    )
+
+    if (
+        component_count == 0
+        or off_balance_count == 0
+    ):
+        return data
+
+    total_by_period = {
+        entry.get(
+            "period"
+        ): entry.get(
+            "value"
+        )
+        for entry in total_assets
+        if entry.get(
+            "period"
+        ) is not None
+    }
+
+    ordered_periods = [
+        period
+        for period in periods
+        if period in total_by_period
+    ]
+
+    if len(
+        ordered_periods
+    ) < 2:
+        return data
+
+    # ------------------------------------------------------
+    # Limit parsing to the ASSETS table area when possible.
+    # ------------------------------------------------------
+
+    upper_text = (
+        document_text.upper()
+    )
+
+    start_index = (
+        upper_text.find(
+            "\nASSETS\n"
+        )
+    )
+
+    if start_index < 0:
+        start_index = (
+            upper_text.find(
+                "ASSETS"
+            )
+        )
+
+    if start_index < 0:
+        return data
+
+    end_candidates = []
+
+    for marker in (
+        "\nSIGNIFICANT ACCOUNTING",
+        "\nTHE SCHEDULES REFERRED",
+        "\nAS PER OUR REPORT",
+    ):
+
+        found = upper_text.find(
+            marker,
+            start_index,
+        )
+
+        if found >= 0:
+            end_candidates.append(
+                found
+            )
+
+    if end_candidates:
+        end_index = min(
+            end_candidates
+        )
+    else:
+        end_index = len(
+            document_text
+        )
+
+    assets_source = (
+        document_text[
+            start_index:end_index
+        ]
+    )
+
+    # ------------------------------------------------------
+    # Build a whitelist only from numbers Gemini already
+    # extracted from the Balance Sheet asset area.
+    # ------------------------------------------------------
+
+    allowed_values = set()
+
+    for item in asset_items:
+
+        for amount in (
+            item.get(
+                "amounts",
+                [],
+            )
+            or []
+        ):
+
+            key = _numeric_key(
+                amount.get(
+                    "value"
+                )
+            )
+
+            if key is not None:
+                allowed_values.add(
+                    key
+                )
+
+    for entry in total_assets:
+
+        key = _numeric_key(
+            entry.get(
+                "value"
+            )
+        )
+
+        if key is not None:
+            allowed_values.add(
+                key
+            )
+
+    source_tokens = (
+        _extract_matching_number_tokens(
+            text=assets_source,
+            allowed_values=allowed_values,
+        )
+    )
+
+    if not source_tokens:
+        return data
+
+    # ------------------------------------------------------
+    # Locate each reported Total Assets value in source order.
+    # ------------------------------------------------------
+
+    total_positions = []
+
+    cursor = 0
+
+    for period in ordered_periods:
+
+        total_key = _numeric_key(
+            total_by_period.get(
+                period
+            )
+        )
+
+        position = None
+
+        for index in range(
+            cursor,
+            len(
+                source_tokens
+            ),
+        ):
+
+            if (
+                _numeric_key(
+                    source_tokens[
+                        index
+                    ][
+                        "value"
+                    ]
+                )
+                == total_key
+            ):
+
+                position = index
+                break
+
+        if position is None:
+            return data
+
+        total_positions.append(
+            position
+        )
+
+        cursor = (
+            position
+            + 1
+        )
+
+    # ------------------------------------------------------
+    # Reconstruct period blocks strictly from source order:
+    #
+    # period 1 components
+    # total assets period 1
+    # period 1 off-balance rows
+    # period 2 components
+    # total assets period 2
+    # period 2 off-balance rows
+    # ...
+    # ------------------------------------------------------
+
+    component_tokens_by_period = {}
+    off_tokens_by_period = {}
+
+    first_total_position = (
+        total_positions[
+            0
+        ]
+    )
+
+    before_first_total = (
+        source_tokens[
+            :first_total_position
+        ]
+    )
+
+    if (
+        len(
+            before_first_total
+        )
+        < component_count
+    ):
+        return data
+
+    component_tokens_by_period[
+        ordered_periods[
+            0
+        ]
+    ] = (
+        before_first_total[
+            -component_count:
+        ]
+    )
+
+    for index in range(
+        len(
+            ordered_periods
+        )
+        - 1
+    ):
+
+        current_total = (
+            total_positions[
+                index
+            ]
+        )
+
+        next_total = (
+            total_positions[
+                index + 1
+            ]
+        )
+
+        between = (
+            source_tokens[
+                current_total
+                + 1:
+                next_total
+            ]
+        )
+
+        required = (
+            off_balance_count
+            + component_count
+        )
+
+        if len(
+            between
+        ) < required:
+            return data
+
+        off_tokens_by_period[
+            ordered_periods[
+                index
+            ]
+        ] = (
+            between[
+                :off_balance_count
+            ]
+        )
+
+        component_tokens_by_period[
+            ordered_periods[
+                index + 1
+            ]
+        ] = (
+            between[
+                -component_count:
+            ]
+        )
+
+    after_last_total = (
+        source_tokens[
+            total_positions[
+                -1
+            ]
+            + 1:
+        ]
+    )
+
+    if (
+        len(
+            after_last_total
+        )
+        >= off_balance_count
+    ):
+
+        off_tokens_by_period[
+            ordered_periods[
+                -1
+            ]
+        ] = (
+            after_last_total[
+                :off_balance_count
+            ]
+        )
+
+    # ------------------------------------------------------
+    # Update only existing extracted period cells.
+    # ------------------------------------------------------
+
+    for period in ordered_periods:
+
+        component_tokens = (
+            component_tokens_by_period.get(
+                period
+            )
+        )
+
+        if (
+            component_tokens
+            and len(
+                component_tokens
+            )
+            == component_count
+        ):
+
+            for (
+                item,
+                token,
+            ) in zip(
+                component_items,
+                component_tokens,
+            ):
+
+                _set_period_amount_from_source(
+                    item=item,
+                    period=period,
+                    token=token,
+                )
+
+        off_tokens = (
+            off_tokens_by_period.get(
+                period
+            )
+        )
+
+        if (
+            off_tokens
+            and len(
+                off_tokens
+            )
+            == off_balance_count
+        ):
+
+            for (
+                item,
+                token,
+            ) in zip(
+                off_balance_items,
+                off_tokens,
+            ):
+
+                _set_period_amount_from_source(
+                    item=item,
+                    period=period,
+                    token=token,
+                )
+
+    return data
+
 # ==========================================================
 # PROFIT & LOSS NORMALIZATION
 # ==========================================================
@@ -856,12 +1516,55 @@ Populate dedicated totals when explicitly visible:
 - total_liabilities
 - total_equity
 
+IMPORTANT COMPARATIVE-TABLE ALIGNMENT RULES:
+
+Balance sheets may be flattened by OCR. The source can contain
+all row labels first, followed by the numeric values for one
+period and then the values for the comparative period.
+
+Do not shift a comparative-period value to the previous or next
+row merely because the OCR text is flattened.
+
+Preserve the original row order and map each complete period
+block to that same ordered list of row labels.
+
+Rows that appear after the reported Assets Total, such as:
+
+- Contingent liabilities
+- Bills for collection
+- other memorandum / off-balance-sheet rows
+
+must remain separate visible line items. They are NOT individual
+Asset components and must not be used as the value of the next
+period's first Asset row.
+
+For example, if the source order is:
+
+ASSETS
+Cash
+Balances with banks
+Investments
+Advances
+Fixed assets
+Other assets
+Total
+Contingent liabilities
+Bills for collection
+
+then EACH reporting period must preserve exactly that same row
+order before moving to the next period.
+
+Do not use an off-balance-sheet number as Cash, Investments,
+Advances, Fixed assets, Other assets, or another Asset row.
+
 Do not calculate missing totals.
 
 Do not infer a missing value.
 
-Treat bracketed financial values as negative where
-parentheses clearly indicate negative values.
+Do not change a number to make the statement balance.
+
+Treat bracketed financial values as negative where parentheses
+clearly indicate negative values.
 
 A visible dash should normally be null.
 
@@ -1176,7 +1879,7 @@ async def extract_structured_data(
         == DocumentType.BALANCE_SHEET
     ):
 
-        return (
+        data = (
             await call_gemini_structured(
                 document_text=(
                     document_text
@@ -1189,6 +1892,15 @@ async def extract_structured_data(
                 ),
             )
         )
+
+        data = (
+            normalize_balance_sheet_data(
+                data=data,
+                document_text=document_text,
+            )
+        )
+
+        return data
 
     # ======================================================
     # PROFIT & LOSS
